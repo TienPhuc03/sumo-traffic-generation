@@ -1,4 +1,4 @@
-#MÔ PHỎNG VÀ ĐIỀU KHIỂN DÒNG GIAO THÔNG VỚI SUMO
+# MÔ PHỎNG VÀ ĐIỀU KHIỂN DÒNG GIAO THÔNG VỚI SUMO
 
 Dự án mô phỏng giao thông sử dụng Eclipse SUMO (Simulation of Urban MObility) và Python (TraCI / sumolib).
 
