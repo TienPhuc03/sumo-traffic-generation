@@ -8,6 +8,9 @@ if 'SUMO_HOME' in os.environ:
 else:
     sys.exit("Vui lòng khai báo biến môi trường 'SUMO_HOME'")
 
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
 import traci
 import sumolib
 
