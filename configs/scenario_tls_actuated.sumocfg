@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kịch bản 6: Đèn tín hiệu cảm ứng thông minh thích ứng theo dòng xe (Actuated TLS) -->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="../networks/hangxanh.net.xml"/>
+        <route-files value="../routes/routes_peak.rou.xml"/>
+        <additional-files value="../routes/vtypes.add.xml,../networks/tls_actuated.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="1.0"/>
+    </time>
+
+    <output>
+        <summary-output value="../data/summary_tls_actuated.xml"/>
+        <tripinfo-output value="../data/tripinfo_tls_actuated.xml"/>
+        <queue-output value="../data/queue_tls_actuated.xml"/>
+    </output>
+
+    <gui_only>
+        <gui-settings-file value="view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="300"/>
+    </processing>
+</configuration>

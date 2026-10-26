@@ -1,0 +1,8 @@
+<additional>
+    <!-- Kịch bản chuyển đổi sang đèn tín hiệu thông minh cảm ứng lưu lượng (Actuated) -->
+    <!-- Sử dụng cơ chế WAUT của SUMO để kích hoạt chương trình 'actuated' ngay từ đầu mô phỏng -->
+    <WAUT id="waut_act" startProg="actuated" refTime="0">
+        <wautSwitch time="0" to="actuated"/>
+    </WAUT>
+    <wautJunction junctionID="joinedS_4066386148_9415490893_9415490903_#3more" wautID="waut_act"/>
+</additional>
