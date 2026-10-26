@@ -1,0 +1,40 @@
+<viewsettings>
+    <scheme name="real world">
+        <opengl
+            dither="0"
+            fps="0"
+            drawForView="0"
+            drawForPosition="0"
+        />
+        <background
+            backgroundColor="235,238,245"
+            showGrid="0"
+            gridXSize="100.00"
+            gridYSize="100.00"
+        />
+        <edges
+            laneEdgeMode="0"
+            laneShowBorders="1"
+            showBikeMarkings="1"
+            colorBy="uniform"
+            laneColor="50,50,50"
+        />
+        <vehicles
+            vehicleMode="0"
+            vehicleQuality="2"
+            vehicleSize="1.20"
+            colorBy="color"
+            showBlinker="1"
+            drawMinGap="0"
+        />
+        <junctions
+            drawJunctionShape="1"
+            drawCrossingsAndWalkingAreas="1"
+            colorBy="uniform"
+            junctionColor="60,60,60"
+        />
+    </scheme>
+    <!-- Tiêu cự camera mặc định phóng thẳng vào trung tâm Nút giao Hàng Xanh -->
+    <viewport x="1070" y="800" zoom="650"/>
+    <delay value="30"/>
+</viewsettings>

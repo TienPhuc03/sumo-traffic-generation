@@ -39,3 +39,7 @@ Thumbs.db
 
 # SUMO temporary / log outputs
 *.log
+
+# Large simulation raw queue outputs (>100MB)
+data/queue_*.xml
+

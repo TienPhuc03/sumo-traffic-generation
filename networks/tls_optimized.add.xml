@@ -1,0 +1,8 @@
+<additional>
+    <!-- Kịch bản chuyển đổi sang chu kỳ đèn tối ưu hóa tại Nút giao Hàng Xanh -->
+    <!-- Sử dụng cơ chế WAUT của SUMO để kích hoạt chương trình 'optimized' ngay từ đầu mô phỏng -->
+    <WAUT id="waut_opt" startProg="optimized" refTime="0">
+        <wautSwitch time="0" to="optimized"/>
+    </WAUT>
+    <wautJunction junctionID="joinedS_4066386148_9415490893_9415490903_#3more" wautID="waut_opt"/>
+</additional>
