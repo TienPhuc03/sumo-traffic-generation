@@ -1,0 +1,18 @@
+<additional>
+    <!-- 1. Vòng cảm ứng từ (Induction Loop / E1) với vị trí pos an toàn (10m) tránh vượt quá chiều dài làn -->
+    <inductionLoop id="e1_1330784594" lane="1330784594#1_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_231981990" lane="231981990#0_0" pos="5.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_53551383" lane="53551383#0_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_1421503181" lane="1421503181#1_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_35085959" lane="35085959_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_408245967" lane="408245967_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_478798997" lane="478798997_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_478798996" lane="478798996_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_330532357" lane="330532357#0_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_231982479" lane="231982479#1_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_326771003" lane="326771003#1_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+    <inductionLoop id="e1_192512333" lane="192512333#0_0" pos="10.0" freq="900.0" file="../data/detector_output.xml"/>
+
+    <!-- 2. Thu thập dữ liệu toàn cảnh (EdgeData) -->
+    <edgeData id="edge_data_summary" freq="3600" file="../data/edgedata_output.xml"/>
+</additional>
