@@ -3,10 +3,25 @@
     <input>
         <net-file value="hangxanh.net.xml"/>
         <route-files value="../routes/route.rou.xml"/>
-        <additional-files value="../routes/detectors.add.xml"/>
+        <additional-files value="../routes/vtypes.add.xml,../routes/detectors.add.xml"/>
     </input>
     <time>
         <begin value="0"/>
         <end value="3600"/>
+        <step-length value="1.0"/>
     </time>
+    <output>
+        <tripinfo-output value="../data/tripinfo_output.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <summary-output value="../data/summary_output.xml"/>
+        <summary-output.period value="60"/>
+        <queue-output value="../data/queue_output.xml"/>
+        <queue-output.period value="60"/>
+        <edgedata-output value="../data/edgedata_output.xml"/>
+        <emission-output value="../data/emission_output.xml"/>
+    </output>
+    <emissions>
+        <device.emissions.probability value="1.0"/>
+        <device.emissions.period value="60"/>
+    </emissions>
 </configuration>
