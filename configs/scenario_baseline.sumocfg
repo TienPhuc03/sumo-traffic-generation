@@ -4,7 +4,10 @@
     <input>
         <net-file value="../networks/hangxanh.net.xml"/>
         <route-files value="../routes/routes_baseline.rou.xml"/>
-        <additional-files value="../routes/vtypes.add.xml"/>
+    
+        <!-- Bổ sung detectors.add.xml vào đây để SUMO nạp các detector   -->
+        
+        <additional-files value="../routes/vtypes.add.xml,../routes/detectors.add.xml"/>
     </input>
 
     <time>
