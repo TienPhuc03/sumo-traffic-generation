@@ -4,7 +4,7 @@
     <input>
         <net-file value="../networks/hangxanh.net.xml"/>
         <route-files value="../routes/routes_baseline.rou.xml"/>
-        <additional-files value="../routes/vtypes.add.xml"/>
+        <additional-files value="../routes/vtypes.add.xml,../routes/detectors.add.xml"/>
     </input>
 
     <time>
@@ -13,11 +13,22 @@
         <step-length value="1.0"/>
     </time>
 
+    <!-- Task 5.3: Cấu hình đầy đủ 5 file đầu ra XML và chu kỳ lấy mẫu (60s) -->
     <output>
-        <summary-output value="../data/summary_baseline.xml"/>
         <tripinfo-output value="../data/tripinfo_baseline.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <summary-output value="../data/summary_baseline.xml"/>
+        <summary-output.period value="60"/>
         <queue-output value="../data/queue_baseline.xml"/>
+        <queue-output.period value="60"/>
+        <edgedata-output value="../data/edgedata_baseline.xml"/>
+        <emission-output value="../data/emission_baseline.xml"/>
     </output>
+
+    <emissions>
+        <device.emissions.probability value="1.0"/>
+        <device.emissions.period value="60"/>
+    </emissions>
 
     <gui_only>
         <gui-settings-file value="view.xml"/>

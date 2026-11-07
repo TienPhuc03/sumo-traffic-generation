@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-07T14:57:58.404958+07:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="../networks/hangxanh.net.xml"/>
+        <route-files value="../routes/routes_offpeak.rou.xml"/>
+        <additional-files value="../routes/vtypes.add.xml,../routes/detectors.add.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="../data/emission_offpeak.xml"/>
+        <queue-output value="../data/queue_offpeak.xml"/>
+        <queue-output.period value="60"/>
+        <summary-output value="../data/summary_offpeak.xml"/>
+        <summary-output.period value="60"/>
+        <tripinfo-output value="../data/tripinfo_offpeak.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <edgedata-output value="../data/edgedata_offpeak.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="300"/>
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <report>
+        <no-warnings value="true"/>
+    </report>
+
+    <emissions>
+        <device.emissions.probability value="1.0"/>
+        <device.emissions.period value="60"/>
+    </emissions>
+
+    <gui_only>
+        <gui-settings-file value="view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<queue-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/queue_file.xsd">
+    <data timestep="0.00">
+        <lanes/>
+    </data>
+    <data timestep="60.00">
+        <lanes/>
+    </data>
+    <data timestep="120.00">
+        <lanes>
+            <lane id="1465496939_0" queueing_time="20.00" queueing_length="11.40" queueing_length_experimental="7.10"/>
+            <lane id="192512367#1_3" queueing_time="32.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
+            <lane id="971692798_1" queueing_time="2.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="971692798_3" queueing_time="1.00" queueing_length="2.84" queueing_length_experimental="2.84"/>
+        </lanes>
+    </data>
+    <data timestep="180.00">
+        <lanes>
+            <lane id="192512367#1_3" queueing_time="33.00" queueing_length="15.80" queueing_length_experimental="15.80"/>
+        </lanes>
+    </data>
+    <data timestep="240.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.63"/>
+            <lane id="1465496939_0" queueing_time="40.00" queueing_length="11.40" queueing_length_experimental="7.10"/>
+            <lane id="330532357#2_1" queueing_time="8.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+</queue-export>

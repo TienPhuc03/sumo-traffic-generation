@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-07T14:57:58.971125+07:00 by Eclipse SUMO sumo 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="../networks/hangxanh.net.xml"/>
+        <route-files value="../routes/routes_baseline.rou.xml"/>
+        <additional-files value="../routes/vtypes.add.xml,../routes/detectors.add.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="../data/emission_baseline.xml"/>
+        <queue-output value="../data/queue_baseline.xml"/>
+        <queue-output.period value="60"/>
+        <summary-output value="../data/summary_baseline.xml"/>
+        <summary-output.period value="60"/>
+        <tripinfo-output value="../data/tripinfo_baseline.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <edgedata-output value="../data/edgedata_baseline.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="300"/>
+        <step-length value="1.0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <report>
+        <no-warnings value="true"/>
+    </report>
+
+    <emissions>
+        <device.emissions.probability value="1.0"/>
+        <device.emissions.period value="60"/>
+    </emissions>
+
+    <gui_only>
+        <gui-settings-file value="view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<queue-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/queue_file.xsd">
+    <data timestep="0.00">
+        <lanes/>
+    </data>
+    <data timestep="60.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="1.00" queueing_length="12.15" queueing_length_experimental="12.15"/>
+            <lane id=":1497313072_8_0" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="1465496939_0" queueing_time="24.00" queueing_length="11.40" queueing_length_experimental="7.10"/>
+            <lane id="817905978#1_0" queueing_time="28.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="120.00">
+        <lanes>
+            <lane id=":2403042654_2_1" queueing_time="11.00" queueing_length="6.76" queueing_length_experimental="6.76"/>
+            <lane id=":2403042654_2_2" queueing_time="17.00" queueing_length="8.57" queueing_length_experimental="8.57"/>
+            <lane id=":2403042654_2_3" queueing_time="24.00" queueing_length="9.96" queueing_length_experimental="0.00"/>
+            <lane id="1465496939_0" queueing_time="24.00" queueing_length="13.90" queueing_length_experimental="9.60"/>
+            <lane id="226262555#4_2" queueing_time="21.00" queueing_length="7.10" queueing_length_experimental="7.10"/>
+            <lane id="971692798_1" queueing_time="15.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="971692798_2" queueing_time="22.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="971692798_3" queueing_time="26.00" queueing_length="8.50" queueing_length_experimental="8.50"/>
+        </lanes>
+    </data>
+    <data timestep="180.00">
+        <lanes>
+            <lane id=":1497276524_0_1" queueing_time="18.00" queueing_length="8.00" queueing_length_experimental="8.00"/>
+            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="28.00" queueing_length="7.63" queueing_length_experimental="7.63"/>
+            <lane id="1265700913_0" queueing_time="5.00" queueing_length="2.20" queueing_length_experimental="2.20"/>
+            <lane id="1465496939_0" queueing_time="1.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id="192512367#1_3" queueing_time="13.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="8.55"/>
+            <lane id="330532357#0_1" queueing_time="7.00" queueing_length="6.57" queueing_length_experimental="6.57"/>
+        </lanes>
+    </data>
+    <data timestep="240.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="34.00" queueing_length="25.65" queueing_length_experimental="25.65"/>
+            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="9.00" queueing_length="5.13" queueing_length_experimental="5.13"/>
+            <lane id="1011942070_0" queueing_time="4.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="1465496939_0" queueing_time="61.00" queueing_length="13.90" queueing_length_experimental="9.60"/>
+            <lane id="192512367#1_3" queueing_time="2.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+            <lane id="226262555#4_2" queueing_time="58.00" queueing_length="38.30" queueing_length_experimental="38.30"/>
+            <lane id="330532357#2_1" queueing_time="11.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="404360199_1" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+</queue-export>

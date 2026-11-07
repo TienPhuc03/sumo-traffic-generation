@@ -32,10 +32,13 @@ sumo_traffic_project/
 │   ├── run_all_scenarios.py     # Script chạy tự động và so sánh KPI các kịch bản
 │   ├── generate_scenario_routes.py # Script sinh dữ liệu luồng xe theo tỉ lệ đô thị VN
 │   └── test_connection.py      # Kiểm tra kết nối SUMO_HOME và TraCI
-├── data/                        # Dữ liệu đầu ra trích xuất từ mô phỏng (Task 5)
-│   ├── summary_*.xml            # Thống kê tổng quan mạng lưới theo từng giây
+├── data/                        # Dữ liệu đầu ra trích xuất từ mô phỏng (Task 5.2 & 5.3)
 │   ├── tripinfo_*.xml           # Chi tiết từng chuyến đi (vận tốc, độ trễ, thời gian chờ)
-│   └── queue_*.xml              # Thống kê chiều dài hàng đợi tại các làn đường
+│   ├── summary_*.xml            # Thống kê tổng quan mạng lưới (chu kỳ lấy mẫu 60s)
+│   ├── queue_*.xml              # Chiều dài hàng đợi tại các làn đường (chu kỳ lấy mẫu 60s)
+│   ├── edgedata_*.xml           # Thống kê mật độ, lưu lượng trên từng đoạn đường (edge)
+│   ├── emission_*.xml           # Thông số khí thải CO2, CO, NOx, nhiên liệu (chu kỳ 60s)
+│   └── detector_output.xml      # Dữ liệu thu thập từ 12 vòng cảm ứng từ E1 (Task 5.2)
 ├── notebooks/                   # Jupyter Notebook phân tích & vẽ đồ thị (Task 6)
 ├── .gitignore                   # Cấu hình bỏ qua venv, cache, file tạm cho Git
 ├── requirements.txt             # Danh sách thư viện Python cần thiết
@@ -79,7 +82,20 @@ sumo-gui -c scenario_peak.sumocfg
 
 ---
 
-## 📊 Liên kết với các Nhiệm vụ tiếp theo của Nhóm
-- **Task 5 (Thiết lập thu thập dữ liệu)**: Dữ liệu mô phỏng tự động ghi vào thư mục `data/` với 3 định dạng: `summary_*.xml`, `tripinfo_*.xml`, `queue_*.xml`.
-- **Task 6 (Phân tích dòng giao thông)**: Sử dụng Jupyter Notebook trong thư mục `notebooks/` nạp dữ liệu từ `data/` để trực quan hóa đồ thị so sánh giữa các kịch bản.
+## 📊 Cấu hình Đầu ra & Chu kỳ Lấy mẫu (Task 5.3)
+
+Tất cả 6 tệp kịch bản `.sumocfg` trong thư mục `configs/` đã được cấu hình đồng bộ 5 loại tệp dữ liệu đầu ra chuẩn XML cùng với hệ thống cảm biến `detectors.add.xml` (Task 5.2):
+
+| Loại Output | Thẻ cấu hình trong `.sumocfg` | Tệp xuất ra (`data/`) | Chu kỳ lấy mẫu | Ý nghĩa thông số |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Tripinfo** | `<tripinfo-output>` | `tripinfo_<kịch_bản>.xml` | Theo từng chuyến xe (`write-unfinished="true"`) | Thời gian di chuyển (`duration`), thời gian chờ (`waitingTime`), độ trễ (`timeLoss`), quãng đường (`routeLength`). |
+| **2. Summary** | `<summary-output>` | `summary_<kịch_bản>.xml` | **60 giây** (`summary-output.period="60"`) | Tổng số xe đang chạy (`running`), số xe dừng chờ (`halting`), vận tốc trung bình toàn mạng lưới (`meanSpeed`). |
+| **3. Queue** | `<queue-output>` | `queue_<kịch_bản>.xml` | **60 giây** (`queue-output.period="60"`) | Chiều dài hàng đợi (`queueing_length`) và thời gian xếp hàng (`queueing_time`) trước các nút giao đèn tín hiệu. |
+| **4. EdgeData** | `<edgedata-output>` | `edgedata_<kịch_bản>.xml` | Toàn chu kỳ / 900s (`detectors.add.xml`) | Mật độ (`density`), hệ số chiếm dụng (`occupancy`), lưu lượng (`flow`) và tốc độ trên từng đoạn đường. |
+| **5. Emission** | `<emission-output>` | `emission_<kịch_bản>.xml` | **60 giây** (`device.emissions.period="60"`) | Khí thải môi trường (`CO2`, `CO`, `HC`, `NOx`, `PMx`), mức tiêu hao nhiên liệu (`fuel`) và tiếng ồn (`noise`). |
+
+---
+
+## 🔗 Liên kết với các Nhiệm vụ tiếp theo của Nhóm
+- **Task 6 (Chạy mô phỏng & Phân tích dòng giao thông)**: Chạy `python scripts/run_all_scenarios.py` và mở Jupyter Notebook `notebooks/traffic_analysis.ipynb` hoặc chạy `python scripts/plot_results.py` để trực quan hóa đồ thị so sánh giữa các kịch bản.
 - **Phân hệ TraCI / AI**: Kết nối điều khiển động thời gian thực với các kịch bản cao điểm và ùn tắc.
