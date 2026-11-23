@@ -38,5 +38,6 @@
     <processing>
         <ignore-route-errors value="true"/>
         <time-to-teleport value="300"/>
+        <ignore-junction-blocker value="15"/>
     </processing>
 </configuration>

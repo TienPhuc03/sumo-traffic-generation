@@ -29,7 +29,7 @@ def extract_unique_routes(source_file):
             if r is not None and r.get('edges'):
                 unique_routes.add(r.get('edges'))
             elem.clear()
-    routes_list = list(unique_routes)
+    routes_list = sorted(unique_routes)
     print(f"-> Thu thập được {len(routes_list)} lộ trình duy nhất hợp lệ qua mạng lưới.")
     return routes_list
 
@@ -52,7 +52,7 @@ def generate_route_file(output_file, routes_pool, total_vehicles, sim_duration=3
         for i, depart in enumerate(depart_times):
             v_type = random.choices(vtypes, weights=weights)[0]
             edge_path = random.choice(routes_pool)
-            f.write(f'    <vehicle id="veh_{i}" type="{v_type}" depart="{depart:.2f}">\n')
+            f.write(f'    <vehicle id="veh_{i}" type="{v_type}" depart="{depart:.2f}" departLane="best" departSpeed="max">\n')
             f.write(f'        <route edges="{edge_path}"/>\n')
             f.write(f'    </vehicle>\n')
             

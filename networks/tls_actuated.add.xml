@@ -1,8 +1,21 @@
 <additional>
-    <!-- Kịch bản chuyển đổi sang đèn tín hiệu thông minh cảm ứng lưu lượng (Actuated) -->
-    <!-- Sử dụng cơ chế WAUT của SUMO để kích hoạt chương trình 'actuated' ngay từ đầu mô phỏng -->
-    <WAUT id="waut_act" startProg="actuated" refTime="0">
-        <wautSwitch time="0" to="actuated"/>
-    </WAUT>
-    <wautJunction junctionID="joinedS_4066386148_9415490893_9415490903_#3more" wautID="waut_act"/>
+    <!-- Kịch bản 6: Đèn tín hiệu cảm ứng thông minh (Actuated) tại 2 nút đèn chính khu vực Ngã tư Hàng Xanh -->
+    <tlLogic id="joinedS_4066386148_9415490893_9415490897_9415490903_#3more" type="actuated" programID="actuated" offset="0">
+        <param key="max-gap" value="3.0"/>
+        <param key="detector-gap" value="2.5"/>
+        <phase duration="48" minDur="25" maxDur="60" state="GGGGGGGGGGGGGGGGGGGGrr"/>
+        <phase duration="3"  minDur="3"  maxDur="3"  state="GGGGGGGGGGGGGGGGyyyyrr"/>
+        <phase duration="24" minDur="14" maxDur="32" state="GGGGGGGGGGGGGGGGrrrrGG"/>
+        <phase duration="3"  minDur="3"  maxDur="3"  state="GGGGGGGGGGGGGGGGrrrryy"/>
+    </tlLogic>
+    <tlLogic id="cluster_10118771782_10118771783_12313165808_12313165809_#2more" type="actuated" programID="actuated" offset="0">
+        <param key="max-gap" value="3.0"/>
+        <param key="detector-gap" value="2.5"/>
+        <phase duration="14" minDur="10" maxDur="18" state="GrrrrrrrrrrrGGGGg"/>
+        <phase duration="3"  minDur="3"  maxDur="3"  state="Grrrrrrrrrrryyyyy"/>
+        <phase duration="26" minDur="18" maxDur="34" state="GGGGGGGrrrrrrrrrr"/>
+        <phase duration="3"  minDur="3"  maxDur="3"  state="yyyyyyyrrrrrrrrrr"/>
+        <phase duration="34" minDur="24" maxDur="44" state="rrrrrrrGGGGGrrrrr"/>
+        <phase duration="3"  minDur="3"  maxDur="3"  state="rrrrrrryyyyyrrrrr"/>
+    </tlLogic>
 </additional>

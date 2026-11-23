@@ -1,8 +1,17 @@
 <additional>
-    <!-- Kịch bản chuyển đổi sang chu kỳ đèn tối ưu hóa tại Nút giao Hàng Xanh -->
-    <!-- Sử dụng cơ chế WAUT của SUMO để kích hoạt chương trình 'optimized' ngay từ đầu mô phỏng -->
-    <WAUT id="waut_opt" startProg="optimized" refTime="0">
-        <wautSwitch time="0" to="optimized"/>
-    </WAUT>
-    <wautJunction junctionID="joinedS_4066386148_9415490893_9415490903_#3more" wautID="waut_opt"/>
+    <!-- Kịch bản 5: Tối ưu chu kỳ đèn cố định tại 2 nút đèn chính khu vực Ngã tư Hàng Xanh -->
+    <tlLogic id="joinedS_4066386148_9415490893_9415490897_9415490903_#3more" type="static" programID="optimized" offset="0">
+        <phase duration="50" state="GGGGGGGGGGGGGGGGGGGGrr"/>
+        <phase duration="3"  state="GGGGGGGGGGGGGGGGyyyyrr"/>
+        <phase duration="26" state="GGGGGGGGGGGGGGGGrrrrGG"/>
+        <phase duration="3"  state="GGGGGGGGGGGGGGGGrrrryy"/>
+    </tlLogic>
+    <tlLogic id="cluster_10118771782_10118771783_12313165808_12313165809_#2more" type="static" programID="optimized" offset="0">
+        <phase duration="14" state="GrrrrrrrrrrrGGGGg"/>
+        <phase duration="3"  state="Grrrrrrrrrrryyyyy"/>
+        <phase duration="26" state="GGGGGGGrrrrrrrrrr"/>
+        <phase duration="3"  state="yyyyyyyrrrrrrrrrr"/>
+        <phase duration="36" state="rrrrrrrGGGGGrrrrr"/>
+        <phase duration="3"  state="rrrrrrryyyyyrrrrr"/>
+    </tlLogic>
 </additional>

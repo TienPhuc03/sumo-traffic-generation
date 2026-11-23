@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-11-07T14:58:02.367656+07:00 by Eclipse SUMO sumo 1.28.0
+<!-- generated on 2026-11-23T19:21:13.666917+07:00 by Eclipse SUMO sumo 1.28.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -22,11 +22,12 @@
 
     <time>
         <begin value="0"/>
-        <end value="300"/>
+        <end value="3600"/>
         <step-length value="1.0"/>
     </time>
 
     <processing>
+        <ignore-junction-blocker value="15"/>
         <ignore-route-errors value="true"/>
         <time-to-teleport value="300"/>
     </processing>
@@ -54,111 +55,1243 @@
     </data>
     <data timestep="60.00">
         <lanes>
-            <lane id="1465496939_0" queueing_time="27.00" queueing_length="7.10" queueing_length_experimental="7.10"/>
-            <lane id="192512383#2_1" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="817905978#1_0" queueing_time="19.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id=":1497276524_0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="8.19"/>
+            <lane id=":5738098172_2_0" queueing_time="8.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.06"/>
+            <lane id="-681539365#0_0" queueing_time="4.00" queueing_length="7.22" queueing_length_experimental="7.22"/>
+            <lane id="1011942070_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="817905978#1_0" queueing_time="29.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
         </lanes>
     </data>
     <data timestep="120.00">
         <lanes>
-            <lane id=":13441692405_6_0" queueing_time="20.00" queueing_length="44.25" queueing_length_experimental="44.25"/>
-            <lane id=":1497276518_0_0" queueing_time="3.00" queueing_length="2.28" queueing_length_experimental="2.28"/>
-            <lane id=":2030639615_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.14"/>
-            <lane id=":2403042654_2_0" queueing_time="5.00" queueing_length="12.96" queueing_length_experimental="12.96"/>
-            <lane id=":2403042654_2_1" queueing_time="21.00" queueing_length="11.08" queueing_length_experimental="11.08"/>
-            <lane id=":2403042654_2_2" queueing_time="11.00" queueing_length="6.67" queueing_length_experimental="6.67"/>
-            <lane id=":2403042654_2_3" queueing_time="23.00" queueing_length="11.06" queueing_length_experimental="6.76"/>
-            <lane id=":5738098172_2_0" queueing_time="41.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="-609752983_0" queueing_time="12.00" queueing_length="6.20" queueing_length_experimental="6.20"/>
-            <lane id="1465496939_0" queueing_time="26.00" queueing_length="16.40" queueing_length_experimental="9.60"/>
-            <lane id="192512367#1_3" queueing_time="35.00" queueing_length="23.90" queueing_length_experimental="23.90"/>
-            <lane id="192512383#2_1" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
-            <lane id="192512383#2_3" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="226262555#4_2" queueing_time="32.00" queueing_length="7.10" queueing_length_experimental="7.10"/>
-            <lane id="609752984#2_0" queueing_time="24.00" queueing_length="15.50" queueing_length_experimental="15.50"/>
-            <lane id="971692798_0" queueing_time="11.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="971692798_1" queueing_time="22.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="971692798_2" queueing_time="19.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="971692798_3" queueing_time="24.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id=":5775221674_2_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-604819712#0_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752983_0" queueing_time="16.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="1465496939_0" queueing_time="41.00" queueing_length="13.68" queueing_length_experimental="10.88"/>
+            <lane id="192512383#2_3" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="34.00" queueing_length="25.21" queueing_length_experimental="25.21"/>
+            <lane id="404360199_0" queueing_time="14.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="737495706#4_0" queueing_time="18.00" queueing_length="7.50" queueing_length_experimental="13.91"/>
         </lanes>
     </data>
     <data timestep="180.00">
         <lanes>
-            <lane id=":1497276518_0_0" queueing_time="1.00" queueing_length="4.95" queueing_length_experimental="4.95"/>
-            <lane id=":1497276518_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.21"/>
-            <lane id=":1497276518_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.88"/>
-            <lane id=":1497276518_4_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.01"/>
-            <lane id=":1497276524_0_0" queueing_time="16.00" queueing_length="6.90" queueing_length_experimental="6.90"/>
-            <lane id=":5738098172_2_0" queueing_time="14.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id=":729523383_1_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.24"/>
-            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.15"/>
-            <lane id=":9415490903_0_3" queueing_time="3.00" queueing_length="6.01" queueing_length_experimental="6.01"/>
-            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="35.00" queueing_length="5.13" queueing_length_experimental="5.13"/>
-            <lane id="1265700913_0" queueing_time="15.00" queueing_length="11.81" queueing_length_experimental="7.50"/>
-            <lane id="1265700913_1" queueing_time="12.00" queueing_length="3.18" queueing_length_experimental="13.23"/>
-            <lane id="1265700913_2" queueing_time="2.00" queueing_length="4.30" queueing_length_experimental="4.30"/>
-            <lane id="1265700924_0" queueing_time="1.00" queueing_length="1.80" queueing_length_experimental="1.80"/>
-            <lane id="1265700924_1" queueing_time="3.00" queueing_length="5.22" queueing_length_experimental="5.22"/>
-            <lane id="1465496939_0" queueing_time="2.00" queueing_length="7.11" queueing_length_experimental="7.11"/>
-            <lane id="192512365#0_5" queueing_time="9.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="192512365#1_4" queueing_time="3.00" queueing_length="6.49" queueing_length_experimental="16.78"/>
-            <lane id="192512365#1_5" queueing_time="33.00" queueing_length="35.09" queueing_length_experimental="26.49"/>
-            <lane id="192512367#1_3" queueing_time="24.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
-            <lane id="192512383#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.14"/>
-            <lane id="192512383#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.04"/>
-            <lane id="192512383#0_3" queueing_time="1.00" queueing_length="3.05" queueing_length_experimental="7.51"/>
-            <lane id="192512383#2_3" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="192512411#1_0" queueing_time="1.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
-            <lane id="226262555#4_2" queueing_time="6.00" queueing_length="15.72" queueing_length_experimental="20.16"/>
-            <lane id="330532357#0_1" queueing_time="25.00" queueing_length="12.77" queueing_length_experimental="12.77"/>
-            <lane id="604140508_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.63"/>
-            <lane id="604819712#0_0" queueing_time="6.00" queueing_length="4.76" queueing_length_experimental="4.76"/>
+            <lane id=":13441692405_6_0" queueing_time="1.00" queueing_length="5.87" queueing_length_experimental="5.87"/>
+            <lane id=":4066386148_0_2" queueing_time="3.00" queueing_length="7.01" queueing_length_experimental="0.00"/>
+            <lane id="-609552280_0" queueing_time="31.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752987_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_0" queueing_time="18.00" queueing_length="13.30" queueing_length_experimental="13.30"/>
+            <lane id="1011942070_1" queueing_time="15.00" queueing_length="13.40" queueing_length_experimental="13.40"/>
+            <lane id="1465496939_0" queueing_time="11.00" queueing_length="15.30" queueing_length_experimental="15.30"/>
+            <lane id="192512367#1_3" queueing_time="18.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="192512406#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.14"/>
+            <lane id="192512411#1_0" queueing_time="17.00" queueing_length="10.00" queueing_length_experimental="10.00"/>
+            <lane id="226262555#4_2" queueing_time="5.00" queueing_length="5.61" queueing_length_experimental="8.47"/>
+            <lane id="404360199_0" queueing_time="5.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="404360199_1" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="6.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="737495706#4_0" queueing_time="21.00" queueing_length="24.51" queueing_length_experimental="24.51"/>
         </lanes>
     </data>
     <data timestep="240.00">
         <lanes>
-            <lane id=":13441692405_6_0" queueing_time="57.00" queueing_length="65.06" queueing_length_experimental="49.65"/>
-            <lane id=":1497276518_0_0" queueing_time="28.00" queueing_length="9.41" queueing_length_experimental="0.00"/>
-            <lane id=":1497276518_4_0" queueing_time="3.00" queueing_length="9.42" queueing_length_experimental="9.42"/>
-            <lane id=":1497276518_4_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.72"/>
-            <lane id=":1497276518_4_3" queueing_time="16.00" queueing_length="20.10" queueing_length_experimental="13.30"/>
-            <lane id=":729523383_1_0" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id=":729523383_1_1" queueing_time="18.00" queueing_length="3.67" queueing_length_experimental="3.67"/>
-            <lane id=":729523383_1_2" queueing_time="31.00" queueing_length="2.27" queueing_length_experimental="2.27"/>
-            <lane id=":729523383_1_3" queueing_time="36.00" queueing_length="2.27" queueing_length_experimental="2.27"/>
-            <lane id=":9415490903_0_0" queueing_time="27.00" queueing_length="14.24" queueing_length_experimental="14.24"/>
-            <lane id=":9415490903_0_1" queueing_time="54.00" queueing_length="6.00" queueing_length_experimental="6.00"/>
-            <lane id=":9415490903_0_2" queueing_time="55.00" queueing_length="6.00" queueing_length_experimental="6.00"/>
-            <lane id=":9415490903_0_3" queueing_time="42.00" queueing_length="6.00" queueing_length_experimental="6.00"/>
-            <lane id="-604819712#0_0" queueing_time="23.00" queueing_length="14.80" queueing_length_experimental="14.80"/>
-            <lane id="-609752980#0_0" queueing_time="14.00" queueing_length="13.00" queueing_length_experimental="13.00"/>
-            <lane id="1265700924_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.03"/>
-            <lane id="1265700924_2" queueing_time="10.00" queueing_length="4.30" queueing_length_experimental="4.30"/>
-            <lane id="1265700924_3" queueing_time="34.00" queueing_length="4.99" queueing_length_experimental="4.99"/>
-            <lane id="1421503180_0" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
-            <lane id="1465496939_0" queueing_time="62.00" queueing_length="11.40" queueing_length_experimental="7.10"/>
-            <lane id="192512365#1_4" queueing_time="45.00" queueing_length="12.93" queueing_length_experimental="12.93"/>
-            <lane id="192512365#1_5" queueing_time="41.00" queueing_length="20.26" queueing_length_experimental="20.26"/>
-            <lane id="192512365#3_1" queueing_time="4.00" queueing_length="3.10" queueing_length_experimental="3.10"/>
-            <lane id="192512365#3_2" queueing_time="14.00" queueing_length="9.17" queueing_length_experimental="9.17"/>
-            <lane id="192512365#3_3" queueing_time="27.00" queueing_length="3.47" queueing_length_experimental="7.99"/>
-            <lane id="192512365#3_4" queueing_time="4.00" queueing_length="7.77" queueing_length_experimental="7.77"/>
+            <lane id=":12307718619_5_0" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_0_0" queueing_time="12.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id=":1497276524_8_0" queueing_time="20.00" queueing_length="15.10" queueing_length_experimental="15.10"/>
+            <lane id=":1497276524_9_0" queueing_time="18.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":4066386148_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.42"/>
+            <lane id=":4066386148_0_2" queueing_time="16.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_3" queueing_time="1.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id="-609752986#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.47"/>
+            <lane id="1011942070_0" queueing_time="5.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="1011942071_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.80"/>
+            <lane id="1265700913_0" queueing_time="4.00" queueing_length="13.50" queueing_length_experimental="10.68"/>
+            <lane id="1265700913_1" queueing_time="6.00" queueing_length="12.05" queueing_length_experimental="9.24"/>
+            <lane id="1265700913_2" queueing_time="4.00" queueing_length="22.82" queueing_length_experimental="0.00"/>
+            <lane id="192512363_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.69"/>
+            <lane id="192512367#1_3" queueing_time="18.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="192512383#2_3" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="9.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="404360199_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="404360199_1" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#1_2" queueing_time="4.00" queueing_length="4.17" queueing_length_experimental="4.17"/>
+            <lane id="725686333#3_2" queueing_time="18.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="6.00" queueing_length="20.22" queueing_length_experimental="20.22"/>
+            <lane id="817905978#1_0" queueing_time="50.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="817905978#1_1" queueing_time="32.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="300.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="16.00" queueing_length="14.40" queueing_length_experimental="1.90"/>
+            <lane id=":1497276512_0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.81"/>
+            <lane id=":4066386148_0_2" queueing_time="1.00" queueing_length="4.52" queueing_length_experimental="4.52"/>
+            <lane id="-609752983_0" queueing_time="21.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="-609752984#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.66"/>
+            <lane id="-609752984#1_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752986#0_0" queueing_time="18.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1465496939_0" queueing_time="34.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512406#2_0" queueing_time="16.00" queueing_length="10.30" queueing_length_experimental="10.30"/>
+            <lane id="226262555#4_2" queueing_time="46.00" queueing_length="19.58" queueing_length_experimental="19.58"/>
+            <lane id="330532364#2_2" queueing_time="4.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="330532364#2_3" queueing_time="5.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="404360199_0" queueing_time="2.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="404360199_1" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="53551383#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.71"/>
+            <lane id="609752984#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.15"/>
+            <lane id="725686333#1_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.47"/>
+            <lane id="737495706#4_0" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="817905978#1_0" queueing_time="21.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+        </lanes>
+    </data>
+    <data timestep="360.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="12.00" queueing_length="10.36" queueing_length_experimental="16.22"/>
+            <lane id=":9415490903_0_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="6.20"/>
+            <lane id="-604819712#0_0" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_0" queueing_time="13.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1011942071_0" queueing_time="1.00" queueing_length="2.28" queueing_length_experimental="2.28"/>
+            <lane id="1465496939_0" queueing_time="28.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
+            <lane id="192512367#1_3" queueing_time="8.00" queueing_length="26.71" queueing_length_experimental="26.71"/>
+            <lane id="192512383#0_3" queueing_time="8.00" queueing_length="3.00" queueing_length_experimental="3.00"/>
+            <lane id="226262555#4_0" queueing_time="3.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+            <lane id="226262555#4_2" queueing_time="6.00" queueing_length="2.80" queueing_length_experimental="15.56"/>
+            <lane id="604140508_0" queueing_time="14.00" queueing_length="7.70" queueing_length_experimental="1.90"/>
+            <lane id="604140508_1" queueing_time="5.00" queueing_length="7.70" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="420.00">
+        <lanes>
+            <lane id=":1497276532_3_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.24"/>
+            <lane id=":4066386148_0_1" queueing_time="10.00" queueing_length="7.01" queueing_length_experimental="0.00"/>
+            <lane id=":9415490903_0_3" queueing_time="9.00" queueing_length="7.00" queueing_length_experimental="7.00"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.23"/>
+            <lane id="1265700913_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.29"/>
+            <lane id="1265700913_2" queueing_time="1.00" queueing_length="14.32" queueing_length_experimental="0.00"/>
+            <lane id="192512367#1_3" queueing_time="25.00" queueing_length="19.51" queueing_length_experimental="19.51"/>
+            <lane id="192512383#0_3" queueing_time="7.00" queueing_length="2.50" queueing_length_experimental="2.50"/>
+            <lane id="192512383#2_2" queueing_time="15.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512383#2_3" queueing_time="12.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="725686333#1_1" queueing_time="15.00" queueing_length="22.57" queueing_length_experimental="0.00"/>
+            <lane id="725686333#1_2" queueing_time="24.00" queueing_length="19.77" queueing_length_experimental="19.77"/>
+            <lane id="725686333#3_1" queueing_time="13.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="725686333#3_2" queueing_time="43.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+        </lanes>
+    </data>
+    <data timestep="480.00">
+        <lanes>
+            <lane id=":1497276524_0_0" queueing_time="4.00" queueing_length="8.30" queueing_length_experimental="8.30"/>
+            <lane id=":1497276524_8_0" queueing_time="10.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":1497276524_9_0" queueing_time="2.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":2030638872_5_0" queueing_time="7.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id=":2030638872_7_0" queueing_time="5.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":5733448384_4_2" queueing_time="3.00" queueing_length="2.18" queueing_length_experimental="2.18"/>
+            <lane id=":5738098172_2_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_3" queueing_time="3.00" queueing_length="7.51" queueing_length_experimental="7.51"/>
+            <lane id="1011942070_0" queueing_time="2.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1011942070_1" queueing_time="16.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512367#1_3" queueing_time="6.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512383#2_2" queueing_time="1.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id="192512383#2_3" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="43.59"/>
+            <lane id="330532357#2_1" queueing_time="6.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="737495706#4_0" queueing_time="18.00" queueing_length="16.11" queueing_length_experimental="16.11"/>
+            <lane id="817905978#1_0" queueing_time="10.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="977346734_3" queueing_time="2.00" queueing_length="4.82" queueing_length_experimental="7.65"/>
+        </lanes>
+    </data>
+    <data timestep="540.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="3.00" queueing_length="4.25" queueing_length_experimental="4.25"/>
+            <lane id=":5775221674_2_0" queueing_time="12.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490897_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.66"/>
+            <lane id=":9415490897_0_3" queueing_time="17.00" queueing_length="3.06" queueing_length_experimental="3.06"/>
+            <lane id="-609752986#0_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_0" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942071_0" queueing_time="2.00" queueing_length="25.91" queueing_length_experimental="25.91"/>
+            <lane id="1011942071_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.12"/>
+            <lane id="1465496939_0" queueing_time="27.00" queueing_length="13.71" queueing_length_experimental="10.90"/>
+            <lane id="226262555#4_0" queueing_time="10.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_1" queueing_time="15.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id="226262555#4_2" queueing_time="20.00" queueing_length="22.72" queueing_length_experimental="22.72"/>
+            <lane id="330374254#1_0" queueing_time="7.00" queueing_length="10.76" queueing_length_experimental="10.76"/>
+            <lane id="330532364#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.98"/>
+            <lane id="330532364#2_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.80"/>
+            <lane id="330532364#2_3" queueing_time="24.00" queueing_length="7.50" queueing_length_experimental="4.70"/>
+            <lane id="53551383#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="8.30"/>
+        </lanes>
+    </data>
+    <data timestep="600.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="12.00" queueing_length="7.55" queueing_length_experimental="7.55"/>
+            <lane id=":9415490903_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.12"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.14"/>
+            <lane id="-609752984#1_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-681539365#0_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1265700924_2" queueing_time="4.00" queueing_length="4.30" queueing_length_experimental="4.30"/>
+            <lane id="1465496939_0" queueing_time="25.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="41.00" queueing_length="8.40" queueing_length_experimental="11.23"/>
+            <lane id="192512383#0_2" queueing_time="5.00" queueing_length="11.26" queueing_length_experimental="11.26"/>
+            <lane id="192512383#0_3" queueing_time="30.00" queueing_length="8.70" queueing_length_experimental="8.70"/>
+            <lane id="192512383#2_3" queueing_time="45.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512406#2_0" queueing_time="17.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512411#1_0" queueing_time="25.00" queueing_length="10.31" queueing_length_experimental="10.31"/>
+            <lane id="226262555#4_2" queueing_time="4.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="404360199_0" queueing_time="2.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="725686333#1_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.71"/>
+            <lane id="737495706#4_0" queueing_time="5.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+        </lanes>
+    </data>
+    <data timestep="660.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="26.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276515_3_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.93"/>
+            <lane id=":2030638872_7_0" queueing_time="20.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":5738098172_1_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.03"/>
+            <lane id="-604819712#0_0" queueing_time="13.00" queueing_length="18.91" queueing_length_experimental="12.63"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.17"/>
+            <lane id="-609752986#0_0" queueing_time="6.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="192512383#2_3" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_2" queueing_time="1.00" queueing_length="4.51" queueing_length_experimental="4.51"/>
+            <lane id="404360199_0" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="404360199_1" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140511_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="725686333#3_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.94"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="10.50" queueing_length_experimental="10.50"/>
+            <lane id="977346734_2" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="4.86"/>
+            <lane id="977346734_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.24"/>
+        </lanes>
+    </data>
+    <data timestep="720.00">
+        <lanes>
+            <lane id=":1497276524_0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.73"/>
+            <lane id=":1497276524_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.35"/>
+            <lane id=":1497276524_10_0" queueing_time="2.00" queueing_length="2.61" queueing_length_experimental="8.47"/>
+            <lane id="-609752983_0" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="4.79"/>
+            <lane id="1011942070_0" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942071_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="15.96"/>
+            <lane id="1011942071_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="14.65"/>
+            <lane id="192512383#2_3" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="192512406#2_0" queueing_time="2.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="226262555#4_2" queueing_time="40.00" queueing_length="23.71" queueing_length_experimental="23.71"/>
+            <lane id="330532364#2_3" queueing_time="19.00" queueing_length="10.50" queueing_length_experimental="4.70"/>
+            <lane id="609752984#2_0" queueing_time="30.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="737495706#4_0" queueing_time="3.00" queueing_length="7.24" queueing_length_experimental="7.24"/>
+        </lanes>
+    </data>
+    <data timestep="780.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="27.00" queueing_length="19.85" queueing_length_experimental="19.85"/>
+            <lane id=":1497276524_6_0" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_2" queueing_time="8.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="1465496939_0" queueing_time="36.00" queueing_length="18.10" queueing_length_experimental="18.10"/>
+            <lane id="192512367#1_3" queueing_time="51.00" queueing_length="17.01" queueing_length_experimental="17.01"/>
+            <lane id="192512383#0_3" queueing_time="19.00" queueing_length="5.90" queueing_length_experimental="5.90"/>
+            <lane id="192512383#2_2" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="23.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512406#2_0" queueing_time="6.00" queueing_length="7.51" queueing_length_experimental="7.51"/>
+            <lane id="192512411#1_0" queueing_time="10.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="226262555#4_2" queueing_time="4.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="404360199_1" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="25.00" queueing_length="36.51" queueing_length_experimental="36.51"/>
+        </lanes>
+    </data>
+    <data timestep="840.00">
+        <lanes>
+            <lane id=":5775221677_8_0" queueing_time="28.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490897_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.11"/>
+            <lane id=":9415490897_0_3" queueing_time="2.00" queueing_length="12.80" queueing_length_experimental="12.80"/>
+            <lane id="-609552282_0" queueing_time="16.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752986#0_0" queueing_time="15.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-681539365#1_0" queueing_time="16.00" queueing_length="6.26" queueing_length_experimental="6.26"/>
+            <lane id="1011942070_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.98"/>
+            <lane id="1465496939_0" queueing_time="11.00" queueing_length="13.91" queueing_length_experimental="8.10"/>
+            <lane id="192512363_0" queueing_time="1.00" queueing_length="4.46" queueing_length_experimental="4.46"/>
+            <lane id="192512367#1_3" queueing_time="30.00" queueing_length="8.40" queueing_length_experimental="11.29"/>
+            <lane id="192512383#2_1" queueing_time="3.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="192512383#2_3" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_1" queueing_time="5.00" queueing_length="14.40" queueing_length_experimental="14.40"/>
+            <lane id="330532364#2_2" queueing_time="1.00" queueing_length="2.03" queueing_length_experimental="4.90"/>
+            <lane id="330532364#2_3" queueing_time="8.00" queueing_length="7.50" queueing_length_experimental="4.70"/>
+            <lane id="604140508_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.75"/>
+            <lane id="609752980#1_0" queueing_time="11.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id="817905978#1_0" queueing_time="59.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="900.00">
+        <lanes>
+            <lane id=":1497276524_0_0" queueing_time="27.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":1497276524_2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.19"/>
+            <lane id=":1497276524_8_0" queueing_time="17.00" queueing_length="8.20" queueing_length_experimental="5.40"/>
+            <lane id=":2403042654_0_0" queueing_time="1.00" queueing_length="8.30" queueing_length_experimental="0.00"/>
+            <lane id=":5775221674_2_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_3" queueing_time="7.00" queueing_length="7.00" queueing_length_experimental="7.00"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.27"/>
+            <lane id="-609752986#0_0" queueing_time="6.00" queueing_length="7.51" queueing_length_experimental="7.51"/>
+            <lane id="-681539365#0_0" queueing_time="44.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
             <lane id="192512367#1_3" queueing_time="4.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="192512383#0_0" queueing_time="26.00" queueing_length="11.24" queueing_length_experimental="11.24"/>
-            <lane id="192512383#0_1" queueing_time="41.00" queueing_length="13.00" queueing_length_experimental="13.00"/>
-            <lane id="192512383#0_2" queueing_time="52.00" queueing_length="11.61" queueing_length_experimental="11.61"/>
-            <lane id="192512383#0_3" queueing_time="41.00" queueing_length="11.61" queueing_length_experimental="11.61"/>
-            <lane id="192512383#2_1" queueing_time="55.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="192512383#2_2" queueing_time="60.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="192512383#2_3" queueing_time="44.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="226262555#4_0" queueing_time="8.00" queueing_length="7.10" queueing_length_experimental="7.10"/>
-            <lane id="226262555#4_2" queueing_time="64.00" queueing_length="44.04" queueing_length_experimental="37.21"/>
-            <lane id="330532357#0_1" queueing_time="4.00" queueing_length="2.27" queueing_length_experimental="2.27"/>
-            <lane id="330532357#2_1" queueing_time="9.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
-            <lane id="604140508_1" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="725686333#3_2" queueing_time="20.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
-            <lane id="817905978#1_0" queueing_time="30.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
-            <lane id="977346734_1" queueing_time="2.00" queueing_length="12.41" queueing_length_experimental="0.00"/>
+            <lane id="192512383#0_1" queueing_time="14.00" queueing_length="5.80" queueing_length_experimental="5.80"/>
+            <lane id="192512383#0_2" queueing_time="5.00" queueing_length="8.70" queueing_length_experimental="8.70"/>
+            <lane id="192512383#0_3" queueing_time="5.00" queueing_length="8.31" queueing_length_experimental="8.31"/>
+            <lane id="192512383#2_2" queueing_time="6.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512383#2_3" queueing_time="8.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512411#1_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="26.00" queueing_length="43.82" queueing_length_experimental="41.01"/>
+            <lane id="330374254#1_0" queueing_time="6.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id="609752984#2_0" queueing_time="4.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="725686333#3_1" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="817905978#1_0" queueing_time="25.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="817905978#1_1" queueing_time="7.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="960.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="5.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":1497276524_0_0" queueing_time="1.00" queueing_length="2.64" queueing_length_experimental="2.64"/>
+            <lane id=":5733448384_4_2" queueing_time="3.00" queueing_length="4.88" queueing_length_experimental="4.88"/>
+            <lane id=":9415490903_0_3" queueing_time="11.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="-604819712#0_0" queueing_time="8.00" queueing_length="10.34" queueing_length_experimental="13.19"/>
+            <lane id="-609752980#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="31.90"/>
+            <lane id="1265700924_2" queueing_time="1.00" queueing_length="5.02" queueing_length_experimental="5.02"/>
+            <lane id="192512383#0_3" queueing_time="10.00" queueing_length="3.00" queueing_length_experimental="8.84"/>
+            <lane id="192512383#2_3" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="26.00" queueing_length="13.47" queueing_length_experimental="13.47"/>
+            <lane id="53551383#0_2" queueing_time="1.00" queueing_length="6.06" queueing_length_experimental="6.06"/>
+            <lane id="604140508_1" queueing_time="1.00" queueing_length="1.97" queueing_length_experimental="1.97"/>
+            <lane id="817905978#1_0" queueing_time="8.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="1020.00">
+        <lanes>
+            <lane id=":2030638872_5_0" queueing_time="3.00" queueing_length="4.71" queueing_length_experimental="4.71"/>
+            <lane id=":2030638872_7_0" queueing_time="22.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":5775221674_1_0" queueing_time="14.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="-604819712#0_0" queueing_time="36.00" queueing_length="19.20" queueing_length_experimental="16.40"/>
+            <lane id="-604819712#1_0" queueing_time="10.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="-609752980#0_0" queueing_time="33.00" queueing_length="33.12" queueing_length_experimental="33.12"/>
+            <lane id="-609752984#1_0" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752985_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752986#0_0" queueing_time="7.00" queueing_length="13.00" queueing_length_experimental="13.00"/>
+            <lane id="-681539365#0_0" queueing_time="31.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="1011942070_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.93"/>
+            <lane id="1265700924_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.81"/>
+            <lane id="1465496939_0" queueing_time="35.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="14.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="330532364#2_3" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="404360199_0" queueing_time="1.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id="404360199_1" queueing_time="27.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="609752984#2_0" queueing_time="19.00" queueing_length="7.54" queueing_length_experimental="7.54"/>
+            <lane id="817905978#1_0" queueing_time="45.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
+            <lane id="817905978#1_1" queueing_time="26.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="977346734_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.51"/>
+        </lanes>
+    </data>
+    <data timestep="1080.00">
+        <lanes>
+            <lane id=":2030639615_0_1" queueing_time="3.00" queueing_length="3.05" queueing_length_experimental="3.05"/>
+            <lane id=":5738098172_2_0" queueing_time="1.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id=":9415490903_0_3" queueing_time="4.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="-609552280_0" queueing_time="28.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="-609552282_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.05"/>
+            <lane id="1465496939_0" queueing_time="5.00" queueing_length="2.80" queueing_length_experimental="5.77"/>
+            <lane id="192512367#1_3" queueing_time="7.00" queueing_length="8.10" queueing_length_experimental="8.10"/>
+            <lane id="192512383#2_3" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="12.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="192512411#1_0" queueing_time="7.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="330374254#1_0" queueing_time="4.00" queueing_length="12.30" queueing_length_experimental="12.30"/>
+            <lane id="330532364#2_3" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_1" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="609752984#2_0" queueing_time="13.00" queueing_length="24.72" queueing_length_experimental="19.11"/>
+            <lane id="725686333#1_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.44"/>
+        </lanes>
+    </data>
+    <data timestep="1140.00">
+        <lanes>
+            <lane id=":1497276515_3_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.52"/>
+            <lane id=":1497276524_0_0" queueing_time="20.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":1497276524_7_0" queueing_time="6.00" queueing_length="12.42" queueing_length_experimental="12.42"/>
+            <lane id=":1497276524_8_0" queueing_time="16.00" queueing_length="11.30" queueing_length_experimental="11.30"/>
+            <lane id=":1497276524_10_0" queueing_time="13.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.19"/>
+            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="18.00" queueing_length="5.53" queueing_length_experimental="5.53"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="192512383#2_3" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_0" queueing_time="17.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="31.00" queueing_length="8.10" queueing_length_experimental="8.10"/>
+            <lane id="330532357#2_1" queueing_time="20.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_2" queueing_time="8.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="404360199_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.90"/>
+            <lane id="609752984#2_0" queueing_time="7.00" queueing_length="13.11" queueing_length_experimental="13.11"/>
+            <lane id="817905978#1_0" queueing_time="13.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="977346734_2" queueing_time="3.00" queueing_length="13.48" queueing_length_experimental="10.43"/>
+            <lane id="977346734_3" queueing_time="1.00" queueing_length="4.68" queueing_length_experimental="14.30"/>
+        </lanes>
+    </data>
+    <data timestep="1200.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="9.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":1497276515_3_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.92"/>
+            <lane id=":1497276525_4_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.14"/>
+            <lane id="-604819712#0_0" queueing_time="9.00" queueing_length="10.00" queueing_length_experimental="10.00"/>
+            <lane id="-609752980#0_0" queueing_time="22.00" queueing_length="19.20" queueing_length_experimental="19.20"/>
+            <lane id="-609752983_0" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1465496939_0" queueing_time="42.00" queueing_length="11.20" queueing_length_experimental="8.40"/>
+            <lane id="192512353#0_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512367#1_3" queueing_time="44.00" queueing_length="19.61" queueing_length_experimental="19.61"/>
+            <lane id="226262555#4_2" queueing_time="8.00" queueing_length="2.80" queueing_length_experimental="8.65"/>
+            <lane id="330532364#2_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.20"/>
+            <lane id="330532364#2_3" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="404360199_1" queueing_time="2.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="604140508_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.62"/>
+            <lane id="604140508_1" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="1260.00">
+        <lanes>
+            <lane id=":11175876176_1_0" queueing_time="4.00" queueing_length="9.30" queueing_length_experimental="6.50"/>
+            <lane id=":13441692405_6_0" queueing_time="15.00" queueing_length="4.55" queueing_length_experimental="4.55"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="15.67"/>
+            <lane id="-609552280_0" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="-609752980#0_0" queueing_time="43.00" queueing_length="45.41" queueing_length_experimental="42.61"/>
+            <lane id="-609752980#1_0" queueing_time="5.00" queueing_length="5.61" queueing_length_experimental="5.61"/>
+            <lane id="1011942071_0" queueing_time="4.00" queueing_length="8.16" queueing_length_experimental="8.16"/>
+            <lane id="1465496939_0" queueing_time="30.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512363_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.79"/>
+            <lane id="192512363_1" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512367#1_3" queueing_time="25.00" queueing_length="16.70" queueing_length_experimental="16.70"/>
+            <lane id="192512383#2_3" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512411#1_0" queueing_time="9.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="404360199_1" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="14.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="609752984#2_0" queueing_time="12.00" queueing_length="14.42" queueing_length_experimental="14.42"/>
+            <lane id="725686333#3_2" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="737495706#4_0" queueing_time="5.00" queueing_length="10.02" queueing_length_experimental="13.26"/>
+            <lane id="817905978#1_0" queueing_time="14.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+        </lanes>
+    </data>
+    <data timestep="1320.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="30.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":13441692405_6_0" queueing_time="2.00" queueing_length="3.70" queueing_length_experimental="3.70"/>
+            <lane id=":9415490903_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.32"/>
+            <lane id="-604819712#0_0" queueing_time="7.00" queueing_length="10.31" queueing_length_experimental="13.12"/>
+            <lane id="-609752980#0_0" queueing_time="8.00" queueing_length="21.52" queueing_length_experimental="21.52"/>
+            <lane id="-609752983_0" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="1011942070_0" queueing_time="1.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="1011942071_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.36"/>
+            <lane id="1465496939_0" queueing_time="11.00" queueing_length="13.16" queueing_length_experimental="10.36"/>
+            <lane id="192512363_1" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_2" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="3.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="192512406#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="192512411#1_0" queueing_time="2.00" queueing_length="16.47" queueing_length_experimental="16.47"/>
+            <lane id="226262555#4_0" queueing_time="42.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.08"/>
+            <lane id="226262555#4_2" queueing_time="41.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id="330532364#2_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.00"/>
+            <lane id="53551383#0_2" queueing_time="19.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="817905978#1_0" queueing_time="26.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="1380.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="8.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":13441692405_6_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="24.83"/>
+            <lane id=":1497276524_0_0" queueing_time="7.00" queueing_length="8.41" queueing_length_experimental="8.41"/>
+            <lane id=":1497276524_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="6.97"/>
+            <lane id=":1497276524_9_0" queueing_time="6.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":1497276524_10_0" queueing_time="6.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":2030638872_5_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.91"/>
+            <lane id=":2030638872_7_0" queueing_time="4.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":2030638872_8_0" queueing_time="1.00" queueing_length="20.16" queueing_length_experimental="0.00"/>
+            <lane id=":2030639615_0_1" queueing_time="7.00" queueing_length="5.75" queueing_length_experimental="5.75"/>
+            <lane id=":9415490903_0_3" queueing_time="1.00" queueing_length="4.51" queueing_length_experimental="4.51"/>
+            <lane id="-609752983_0" queueing_time="21.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752986#0_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942071_0" queueing_time="8.00" queueing_length="2.26" queueing_length_experimental="2.26"/>
+            <lane id="192512367#0_3" queueing_time="19.00" queueing_length="17.10" queueing_length_experimental="23.04"/>
+            <lane id="192512367#1_3" queueing_time="20.00" queueing_length="22.81" queueing_length_experimental="22.81"/>
+            <lane id="192512383#2_3" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.77"/>
+            <lane id="192512411#1_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_0" queueing_time="12.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="19.00" queueing_length="8.50" queueing_length_experimental="8.50"/>
+            <lane id="330532357#2_1" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="404360199_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="9.00" queueing_length="7.70" queueing_length_experimental="0.00"/>
+            <lane id="609752984#2_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="12.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+        </lanes>
+    </data>
+    <data timestep="1440.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="28.00" queueing_length="19.85" queueing_length_experimental="19.85"/>
+            <lane id=":1497313072_8_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.90"/>
+            <lane id=":5775221674_2_0" queueing_time="15.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.37"/>
+            <lane id=":9415490903_0_3" queueing_time="9.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="1465496939_0" queueing_time="48.00" queueing_length="18.10" queueing_length_experimental="18.10"/>
+            <lane id="192512367#1_3" queueing_time="30.00" queueing_length="14.01" queueing_length_experimental="14.01"/>
+            <lane id="192512383#2_3" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_3" queueing_time="24.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+        </lanes>
+    </data>
+    <data timestep="1500.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="26.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":13441692405_6_0" queueing_time="11.00" queueing_length="15.85" queueing_length_experimental="15.85"/>
+            <lane id=":5733448384_4_2" queueing_time="10.00" queueing_length="5.18" queueing_length_experimental="5.18"/>
+            <lane id=":5775221674_2_0" queueing_time="75.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_1" queueing_time="1.00" queueing_length="4.42" queueing_length_experimental="4.42"/>
+            <lane id="-604819712#0_0" queueing_time="9.00" queueing_length="13.13" queueing_length_experimental="13.13"/>
+            <lane id="-609552280_0" queueing_time="38.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609552282_0" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="1011942071_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.34"/>
+            <lane id="1465496939_0" queueing_time="16.00" queueing_length="10.90" queueing_length_experimental="10.90"/>
+            <lane id="192512367#1_1" queueing_time="10.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="2.00" queueing_length="43.15" queueing_length_experimental="39.57"/>
+            <lane id="330532364#2_3" queueing_time="1.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="404360199_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.07"/>
+            <lane id="404360199_1" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="4.00" queueing_length="7.70" queueing_length_experimental="1.90"/>
+            <lane id="604140508_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.91"/>
+            <lane id="609752984#2_0" queueing_time="12.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="737495706#4_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="13.51"/>
+            <lane id="977346734_3" queueing_time="10.00" queueing_length="7.11" queueing_length_experimental="9.93"/>
+        </lanes>
+    </data>
+    <data timestep="1560.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="16.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.61"/>
+            <lane id=":1497313072_8_0" queueing_time="32.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":366441141_0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.62"/>
+            <lane id=":366441141_0_1" queueing_time="25.00" queueing_length="8.06" queueing_length_experimental="2.26"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.83"/>
+            <lane id="-609752983_0" queueing_time="5.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="-609752986#0_0" queueing_time="26.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-681539365#0_0" queueing_time="36.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="9.00" queueing_length="10.50" queueing_length_experimental="10.50"/>
+            <lane id="226262555#4_2" queueing_time="22.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="35085959_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.95"/>
+            <lane id="404360199_0" queueing_time="1.00" queueing_length="10.81" queueing_length_experimental="10.81"/>
+            <lane id="404360199_1" queueing_time="48.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="609752980#1_0" queueing_time="20.00" queueing_length="5.91" queueing_length_experimental="5.91"/>
+            <lane id="609752984#2_0" queueing_time="18.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="737495706#4_0" queueing_time="15.00" queueing_length="28.61" queueing_length_experimental="28.61"/>
+        </lanes>
+    </data>
+    <data timestep="1620.00">
+        <lanes>
+            <lane id=":2030639615_0_1" queueing_time="13.00" queueing_length="3.05" queueing_length_experimental="3.05"/>
+            <lane id=":9415490903_0_2" queueing_time="21.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_3" queueing_time="15.00" queueing_length="10.00" queueing_length_experimental="0.00"/>
+            <lane id="-604819712#0_0" queueing_time="1.00" queueing_length="1.94" queueing_length_experimental="12.81"/>
+            <lane id="-609552280_0" queueing_time="46.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752980#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.66"/>
+            <lane id="1011942071_0" queueing_time="20.00" queueing_length="2.26" queueing_length_experimental="2.26"/>
+            <lane id="1011942071_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.54"/>
+            <lane id="192512367#1_3" queueing_time="30.00" queueing_length="15.30" queueing_length_experimental="18.18"/>
+            <lane id="192512383#2_3" queueing_time="23.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="404360199_1" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="22.00" queueing_length="7.70" queueing_length_experimental="1.90"/>
+            <lane id="604140508_1" queueing_time="18.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="609752984#1_0" queueing_time="1.00" queueing_length="14.30" queueing_length_experimental="17.15"/>
+            <lane id="737495706#2_0" queueing_time="22.00" queueing_length="13.70" queueing_length_experimental="13.70"/>
+            <lane id="737495706#4_0" queueing_time="38.00" queueing_length="39.01" queueing_length_experimental="30.41"/>
+        </lanes>
+    </data>
+    <data timestep="1680.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="1.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id=":13441692405_6_0" queueing_time="19.00" queueing_length="10.15" queueing_length_experimental="10.15"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.33"/>
+            <lane id=":9415490897_0_3" queueing_time="49.00" queueing_length="6.16" queueing_length_experimental="6.16"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.11"/>
+            <lane id=":9415490903_0_3" queueing_time="13.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="1265700924_1" queueing_time="1.00" queueing_length="1.81" queueing_length_experimental="1.81"/>
+            <lane id="1465496939_0" queueing_time="39.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_0" queueing_time="6.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512367#1_3" queueing_time="5.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512383#2_3" queueing_time="17.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_1" queueing_time="1.00" queueing_length="4.44" queueing_length_experimental="4.44"/>
+            <lane id="330532364#2_2" queueing_time="7.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="330532364#2_3" queueing_time="51.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="404360199_0" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="4.73"/>
+            <lane id="404360199_1" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="5.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="737495706#4_0" queueing_time="15.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+        </lanes>
+    </data>
+    <data timestep="1740.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030638872_3_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.04"/>
+            <lane id=":2030639615_0_0" queueing_time="8.00" queueing_length="3.05" queueing_length_experimental="3.05"/>
+            <lane id=":2030639615_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.15"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.59"/>
+            <lane id=":9415490903_0_3" queueing_time="2.00" queueing_length="7.03" queueing_length_experimental="7.03"/>
+            <lane id="-604819712#0_0" queueing_time="12.00" queueing_length="10.31" queueing_length_experimental="10.31"/>
+            <lane id="1011942070_1" queueing_time="6.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1011942071_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.07"/>
+            <lane id="1465496939_0" queueing_time="3.00" queueing_length="2.80" queueing_length_experimental="6.11"/>
+            <lane id="192512383#2_3" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512406#2_0" queueing_time="44.00" queueing_length="13.11" queueing_length_experimental="13.11"/>
+            <lane id="226262555#4_0" queueing_time="11.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_1" queueing_time="15.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="38.00" queueing_length="46.71" queueing_length_experimental="40.91"/>
+            <lane id="330532357#2_1" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="330532364#2_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="604140508_0" queueing_time="21.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="604140508_1" queueing_time="16.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="609752984#2_0" queueing_time="27.00" queueing_length="23.00" queueing_length_experimental="20.20"/>
+            <lane id="737495706#4_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="1800.00">
+        <lanes>
+            <lane id=":1497276524_0_0" queueing_time="15.00" queueing_length="5.10" queueing_length_experimental="5.10"/>
+            <lane id=":1497276524_8_0" queueing_time="4.00" queueing_length="2.60" queueing_length_experimental="5.60"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.02"/>
+            <lane id=":5738098172_2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="-609552280_0" queueing_time="14.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752983_0" queueing_time="12.00" queueing_length="7.20" queueing_length_experimental="7.20"/>
+            <lane id="192512367#1_3" queueing_time="50.00" queueing_length="20.01" queueing_length_experimental="22.81"/>
+            <lane id="192512406#2_0" queueing_time="20.00" queueing_length="10.50" queueing_length_experimental="10.50"/>
+            <lane id="226262555#4_0" queueing_time="11.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="5.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="330532364#2_3" queueing_time="12.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="53551383#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.43"/>
+            <lane id="53551383#0_2" queueing_time="11.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="53551383#0_3" queueing_time="1.00" queueing_length="8.60" queueing_length_experimental="8.60"/>
+            <lane id="609752984#2_0" queueing_time="22.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="737495706#4_0" queueing_time="4.00" queueing_length="13.56" queueing_length_experimental="33.45"/>
+        </lanes>
+    </data>
+    <data timestep="1860.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="30.00" queueing_length="16.15" queueing_length_experimental="16.15"/>
+            <lane id=":1497276524_4_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_5_0" queueing_time="4.00" queueing_length="19.17" queueing_length_experimental="0.00"/>
+            <lane id=":1497276524_6_0" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id=":4066386148_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.12"/>
+            <lane id=":9415490897_0_3" queueing_time="14.00" queueing_length="3.26" queueing_length_experimental="3.26"/>
+            <lane id=":9415490903_0_2" queueing_time="4.00" queueing_length="4.56" queueing_length_experimental="4.56"/>
+            <lane id=":9415490903_0_3" queueing_time="11.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id="-681539365#0_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.77"/>
+            <lane id="1265700913_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.43"/>
+            <lane id="192512367#1_0" queueing_time="10.00" queueing_length="8.50" queueing_length_experimental="8.50"/>
+            <lane id="192512367#1_3" queueing_time="22.00" queueing_length="8.10" queueing_length_experimental="8.10"/>
+            <lane id="192512383#2_2" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="17.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512411#1_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_3" queueing_time="23.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="404360199_1" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.91"/>
+            <lane id="737495706#4_0" queueing_time="3.00" queueing_length="10.57" queueing_length_experimental="13.54"/>
+        </lanes>
+    </data>
+    <data timestep="1920.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="3.00" queueing_length="1.95" queueing_length_experimental="1.95"/>
+            <lane id=":2030639615_0_0" queueing_time="6.00" queueing_length="2.76" queueing_length_experimental="2.76"/>
+            <lane id=":4066386148_0_2" queueing_time="14.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.03"/>
+            <lane id=":9415490903_0_2" queueing_time="39.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_3" queueing_time="9.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="-609552282_0" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752980#0_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="4.70"/>
+            <lane id="-609752985_0" queueing_time="15.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="-609752986#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.91"/>
+            <lane id="-609752987_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.32"/>
+            <lane id="-681539365#0_0" queueing_time="10.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="1011942070_0" queueing_time="12.00" queueing_length="10.00" queueing_length_experimental="10.00"/>
+            <lane id="1011942070_1" queueing_time="8.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="1265471308_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.82"/>
+            <lane id="1465496939_0" queueing_time="23.00" queueing_length="11.40" queueing_length_experimental="8.60"/>
+            <lane id="192512383#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="6.42"/>
+            <lane id="192512383#0_2" queueing_time="27.00" queueing_length="8.61" queueing_length_experimental="8.61"/>
+            <lane id="192512383#0_3" queueing_time="7.00" queueing_length="11.67" queueing_length_experimental="11.67"/>
+            <lane id="192512383#2_3" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="19.00" queueing_length="10.40" queueing_length_experimental="10.40"/>
+            <lane id="192512411#1_0" queueing_time="18.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="226262555#4_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="15.89"/>
+            <lane id="330532357#2_1" queueing_time="1.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id="404360199_0" queueing_time="2.00" queueing_length="2.00" queueing_length_experimental="2.00"/>
+            <lane id="404360199_1" queueing_time="13.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="604140508_0" queueing_time="7.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="604140508_1" queueing_time="16.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="725686333#3_2" queueing_time="15.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="12.00" queueing_length="15.80" queueing_length_experimental="18.98"/>
+            <lane id="817905978#1_0" queueing_time="20.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="1980.00">
+        <lanes>
+            <lane id=":2030638872_7_0" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="7.95"/>
+            <lane id=":2030639615_0_1" queueing_time="2.00" queueing_length="5.95" queueing_length_experimental="0.00"/>
+            <lane id=":5738098172_2_0" queueing_time="25.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_2" queueing_time="2.00" queueing_length="7.31" queueing_length_experimental="3.62"/>
+            <lane id=":9415490903_0_3" queueing_time="25.00" queueing_length="10.00" queueing_length_experimental="0.00"/>
+            <lane id="-609752983_0" queueing_time="11.00" queueing_length="27.73" queueing_length_experimental="27.73"/>
+            <lane id="-609752986#0_0" queueing_time="60.00" queueing_length="21.91" queueing_length_experimental="21.91"/>
+            <lane id="1465496939_0" queueing_time="5.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512365#3_5" queueing_time="24.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="192512383#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.37"/>
+            <lane id="192512383#0_3" queueing_time="23.00" queueing_length="11.11" queueing_length_experimental="11.11"/>
+            <lane id="192512383#2_3" queueing_time="26.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512406#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.76"/>
+            <lane id="192512411#1_0" queueing_time="9.00" queueing_length="10.00" queueing_length_experimental="10.00"/>
+            <lane id="226262555#4_0" queueing_time="17.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_1" queueing_time="5.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="17.00" queueing_length="20.01" queueing_length_experimental="20.01"/>
+            <lane id="330532364#2_2" queueing_time="12.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="404360199_1" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_0" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="604140508_1" queueing_time="5.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="609752984#2_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="2040.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276515_3_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.89"/>
+            <lane id=":1497276524_0_0" queueing_time="18.00" queueing_length="10.70" queueing_length_experimental="7.90"/>
+            <lane id=":1497276524_2_0" queueing_time="4.00" queueing_length="2.88" queueing_length_experimental="2.88"/>
+            <lane id=":1497276524_8_0" queueing_time="17.00" queueing_length="7.90" queueing_length_experimental="5.10"/>
+            <lane id=":2030638872_7_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030638872_8_0" queueing_time="2.00" queueing_length="20.67" queueing_length_experimental="0.00"/>
+            <lane id=":5775221674_2_0" queueing_time="22.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-604819712#0_0" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1265700913_0" queueing_time="10.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="1265700913_1" queueing_time="2.00" queueing_length="6.39" queueing_length_experimental="6.39"/>
+            <lane id="192512367#1_0" queueing_time="28.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512367#1_3" queueing_time="40.00" queueing_length="10.90" queueing_length_experimental="10.90"/>
+            <lane id="192512406#2_0" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="1.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+            <lane id="330532364#2_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.92"/>
+            <lane id="330532364#2_3" queueing_time="2.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="404360199_0" queueing_time="21.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="404360199_1" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="10.30" queueing_length_experimental="10.30"/>
+            <lane id="971692798_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.18"/>
+            <lane id="977346734_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.18"/>
+        </lanes>
+    </data>
+    <data timestep="2100.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.12"/>
+            <lane id=":13441692405_6_0" queueing_time="18.00" queueing_length="10.36" queueing_length_experimental="10.36"/>
+            <lane id=":1497313061_2_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030638872_5_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.30"/>
+            <lane id=":2030638872_7_0" queueing_time="7.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id=":4066386148_0_2" queueing_time="2.00" queueing_length="7.01" queueing_length_experimental="0.00"/>
+            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="8.00" queueing_length="5.53" queueing_length_experimental="5.53"/>
+            <lane id="-604819712#0_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.07"/>
+            <lane id="1465496939_0" queueing_time="49.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="4.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="330532357#2_1" queueing_time="14.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_3" queueing_time="3.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="604140508_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.93"/>
+            <lane id="725686333#1_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.12"/>
+            <lane id="725686333#3_1" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="737495706#4_0" queueing_time="12.00" queueing_length="21.44" queueing_length_experimental="24.40"/>
+            <lane id="977346734_3" queueing_time="2.00" queueing_length="7.71" queueing_length_experimental="10.86"/>
+        </lanes>
+    </data>
+    <data timestep="2160.00">
+        <lanes>
+            <lane id=":2030638872_7_0" queueing_time="1.00" queueing_length="1.95" queueing_length_experimental="1.95"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="13.54"/>
+            <lane id="1465496939_0" queueing_time="27.00" queueing_length="11.45" queueing_length_experimental="8.60"/>
+            <lane id="192512383#2_3" queueing_time="5.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512406#2_0" queueing_time="18.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="226262555#4_2" queueing_time="22.00" queueing_length="8.10" queueing_length_experimental="8.10"/>
+            <lane id="330532364#2_2" queueing_time="2.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="330532364#2_3" queueing_time="23.00" queueing_length="7.50" queueing_length_experimental="4.70"/>
+            <lane id="604140508_0" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="609752984#2_0" queueing_time="2.00" queueing_length="7.60" queueing_length_experimental="10.54"/>
+            <lane id="725686333#1_2" queueing_time="24.00" queueing_length="4.27" queueing_length_experimental="4.27"/>
+            <lane id="725686333#3_2" queueing_time="28.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="817905978#1_0" queueing_time="9.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="2220.00">
+        <lanes>
+            <lane id=":1497313072_8_0" queueing_time="17.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030639123_8_0" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_2" queueing_time="2.00" queueing_length="7.51" queueing_length_experimental="7.51"/>
+            <lane id="192512367#1_3" queueing_time="41.00" queueing_length="19.82" queueing_length_experimental="19.82"/>
+            <lane id="192512383#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="6.20"/>
+            <lane id="192512383#2_2" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="9.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id="609752984#2_0" queueing_time="4.00" queueing_length="7.51" queueing_length_experimental="10.40"/>
+            <lane id="977346734_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="8.15"/>
+        </lanes>
+    </data>
+    <data timestep="2280.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="28.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":1497276524_0_0" queueing_time="11.00" queueing_length="8.20" queueing_length_experimental="8.20"/>
+            <lane id=":1497276524_3_0" queueing_time="6.00" queueing_length="16.49" queueing_length_experimental="16.49"/>
+            <lane id=":1497276524_4_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_5_0" queueing_time="2.00" queueing_length="19.17" queueing_length_experimental="0.00"/>
+            <lane id=":1497276524_6_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_8_0" queueing_time="8.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":1497276524_9_0" queueing_time="16.00" queueing_length="2.00" queueing_length_experimental="2.00"/>
+            <lane id=":4066386148_0_2" queueing_time="1.00" queueing_length="4.60" queueing_length_experimental="4.60"/>
+            <lane id=":5733448384_4_2" queueing_time="3.00" queueing_length="11.58" queueing_length_experimental="11.58"/>
+            <lane id="-604819712#0_0" queueing_time="13.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="-609552282_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752980#0_0" queueing_time="8.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1011942070_0" queueing_time="2.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1265700913_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.07"/>
+            <lane id="192512367#1_3" queueing_time="2.00" queueing_length="2.80" queueing_length_experimental="5.66"/>
+            <lane id="192512383#2_1" queueing_time="8.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512406#2_0" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="53551383#0_2" queueing_time="1.00" queueing_length="12.75" queueing_length_experimental="12.75"/>
+            <lane id="725686333#3_2" queueing_time="2.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id="817905978#1_0" queueing_time="32.00" queueing_length="2.80" queueing_length_experimental="15.02"/>
+            <lane id="817905978#1_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.90"/>
+        </lanes>
+    </data>
+    <data timestep="2340.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="11.00" queueing_length="4.75" queueing_length_experimental="4.75"/>
+            <lane id=":1497313072_8_0" queueing_time="34.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030638872_5_0" queueing_time="5.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id=":2030638872_7_0" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id=":5775221674_1_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":5775221674_2_0" queueing_time="26.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.87"/>
+            <lane id=":9415490903_0_3" queueing_time="3.00" queueing_length="7.36" queueing_length_experimental="4.50"/>
+            <lane id="-609752986#0_0" queueing_time="41.00" queueing_length="22.81" queueing_length_experimental="22.81"/>
+            <lane id="1465496939_0" queueing_time="41.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
+            <lane id="192512383#2_3" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512411#1_0" queueing_time="1.00" queueing_length="10.60" queueing_length_experimental="13.78"/>
+            <lane id="226262555#4_2" queueing_time="40.00" queueing_length="11.20" queueing_length_experimental="11.20"/>
+            <lane id="330374254#1_0" queueing_time="4.00" queueing_length="11.21" queueing_length_experimental="17.77"/>
+            <lane id="330532357#2_1" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="609752980#1_0" queueing_time="24.00" queueing_length="8.71" queueing_length_experimental="8.71"/>
+            <lane id="737495706#4_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="2400.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="22.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":13441692405_6_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.92"/>
+            <lane id=":1497313072_8_0" queueing_time="94.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":5775221674_1_0" queueing_time="26.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="-609752986#0_0" queueing_time="31.00" queueing_length="30.41" queueing_length_experimental="24.81"/>
+            <lane id="1465496939_0" queueing_time="22.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="17.00" queueing_length="22.81" queueing_length_experimental="22.81"/>
+            <lane id="226262555#4_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.84"/>
+            <lane id="226262555#4_2" queueing_time="16.00" queueing_length="11.21" queueing_length_experimental="11.21"/>
+            <lane id="330532364#2_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.98"/>
+            <lane id="609752980#0_0" queueing_time="25.00" queueing_length="8.56" queueing_length_experimental="8.56"/>
+            <lane id="609752980#1_0" queueing_time="84.00" queueing_length="24.02" queueing_length_experimental="24.02"/>
+            <lane id="609752986#0_0" queueing_time="17.00" queueing_length="10.50" queueing_length_experimental="10.50"/>
+            <lane id="725686333#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.62"/>
+        </lanes>
+    </data>
+    <data timestep="2460.00">
+        <lanes>
+            <lane id=":1497276518_4_0" queueing_time="1.00" queueing_length="11.77" queueing_length_experimental="11.77"/>
+            <lane id=":1497276524_0_0" queueing_time="14.00" queueing_length="10.90" queueing_length_experimental="10.90"/>
+            <lane id=":1497313072_8_0" queueing_time="30.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_1" queueing_time="7.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_3" queueing_time="28.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.14"/>
+            <lane id="-609552282_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752980#0_0" queueing_time="1.00" queueing_length="1.93" queueing_length_experimental="1.93"/>
+            <lane id="-609752985_0" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752986#0_0" queueing_time="12.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="1265700924_1" queueing_time="1.00" queueing_length="1.87" queueing_length_experimental="1.87"/>
+            <lane id="1465496939_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="16.14"/>
+            <lane id="192512383#0_2" queueing_time="18.00" queueing_length="5.70" queueing_length_experimental="5.70"/>
+            <lane id="192512383#0_3" queueing_time="19.00" queueing_length="8.61" queueing_length_experimental="8.61"/>
+            <lane id="192512383#2_1" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_2" queueing_time="39.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="192512383#2_3" queueing_time="36.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="7.00" queueing_length="7.20" queueing_length_experimental="7.20"/>
+            <lane id="192512411#1_0" queueing_time="10.00" queueing_length="1.90" queueing_length_experimental="4.83"/>
+            <lane id="404360199_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="404360199_1" queueing_time="4.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="609752980#1_0" queueing_time="28.00" queueing_length="21.22" queueing_length_experimental="21.22"/>
+            <lane id="737495706#4_0" queueing_time="9.00" queueing_length="21.94" queueing_length_experimental="21.94"/>
+            <lane id="817905978#1_0" queueing_time="47.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id="817905978#1_1" queueing_time="28.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+        </lanes>
+    </data>
+    <data timestep="2520.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="39.00" queueing_length="49.16" queueing_length_experimental="49.16"/>
+            <lane id=":9415490903_0_2" queueing_time="18.00" queueing_length="7.00" queueing_length_experimental="7.00"/>
+            <lane id="192512367#1_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.13"/>
+            <lane id="192512383#0_2" queueing_time="14.00" queueing_length="2.50" queueing_length_experimental="2.50"/>
+            <lane id="192512383#0_3" queueing_time="17.00" queueing_length="5.70" queueing_length_experimental="5.70"/>
+            <lane id="192512383#2_2" queueing_time="22.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512383#2_3" queueing_time="20.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="404360199_1" queueing_time="3.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="604140508_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.96"/>
+            <lane id="604140508_1" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="4.90"/>
+            <lane id="609752980#1_0" queueing_time="88.00" queueing_length="32.62" queueing_length_experimental="26.82"/>
+            <lane id="609752984#2_0" queueing_time="7.00" queueing_length="4.40" queueing_length_experimental="17.30"/>
+            <lane id="737495706#2_0" queueing_time="6.00" queueing_length="5.61" queueing_length_experimental="5.61"/>
+            <lane id="737495706#4_0" queueing_time="15.00" queueing_length="36.63" queueing_length_experimental="30.91"/>
+            <lane id="817905978#1_0" queueing_time="1.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+        </lanes>
+    </data>
+    <data timestep="2580.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":13441692405_6_0" queueing_time="32.00" queueing_length="7.55" queueing_length_experimental="7.55"/>
+            <lane id=":2030638872_7_0" queueing_time="41.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":5775221674_1_0" queueing_time="3.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id=":9415490897_0_2" queueing_time="2.00" queueing_length="3.26" queueing_length_experimental="3.26"/>
+            <lane id=":9415490897_0_3" queueing_time="22.00" queueing_length="12.96" queueing_length_experimental="12.96"/>
+            <lane id="-609752983_0" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="1011942070_0" queueing_time="30.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="1465496939_0" queueing_time="35.00" queueing_length="11.40" queueing_length_experimental="8.60"/>
+            <lane id="192512406#2_0" queueing_time="2.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="226262555#4_0" queueing_time="3.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="28.00" queueing_length="5.60" queueing_length_experimental="8.51"/>
+            <lane id="330532364#2_2" queueing_time="24.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="330532364#2_3" queueing_time="29.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="404360199_0" queueing_time="13.00" queueing_length="10.00" queueing_length_experimental="10.00"/>
+            <lane id="404360199_1" queueing_time="27.00" queueing_length="10.40" queueing_length_experimental="7.60"/>
+            <lane id="609752984#2_0" queueing_time="44.00" queueing_length="13.40" queueing_length_experimental="13.40"/>
+            <lane id="737495706#4_0" queueing_time="2.00" queueing_length="7.70" queueing_length_experimental="14.05"/>
+        </lanes>
+    </data>
+    <data timestep="2640.00">
+        <lanes>
+            <lane id=":1497276518_0_2" queueing_time="2.00" queueing_length="2.67" queueing_length_experimental="5.50"/>
+            <lane id="-609752980#0_0" queueing_time="11.00" queueing_length="19.13" queueing_length_experimental="19.13"/>
+            <lane id="-609752986#0_0" queueing_time="22.00" queueing_length="7.50" queueing_length_experimental="10.32"/>
+            <lane id="1265471308_2" queueing_time="2.00" queueing_length="1.81" queueing_length_experimental="1.81"/>
+            <lane id="1265700924_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.32"/>
+            <lane id="192512367#1_3" queueing_time="31.00" queueing_length="11.40" queueing_length_experimental="11.40"/>
+            <lane id="192512383#0_3" queueing_time="15.00" queueing_length="5.90" queueing_length_experimental="5.90"/>
+            <lane id="192512383#2_2" queueing_time="1.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="192512383#2_3" queueing_time="25.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512406#2_0" queueing_time="3.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="226262555#4_2" queueing_time="3.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+            <lane id="404360199_0" queueing_time="20.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="404360199_1" queueing_time="1.00" queueing_length="4.41" queueing_length_experimental="4.41"/>
+            <lane id="604140508_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.04"/>
+            <lane id="604140508_1" queueing_time="1.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="609752984#2_0" queueing_time="8.00" queueing_length="15.93" queueing_length_experimental="22.11"/>
+            <lane id="737495706#2_0" queueing_time="6.00" queueing_length="17.31" queueing_length_experimental="17.31"/>
+            <lane id="737495706#4_0" queueing_time="16.00" queueing_length="38.41" queueing_length_experimental="32.81"/>
+        </lanes>
+    </data>
+    <data timestep="2700.00">
+        <lanes>
+            <lane id=":1497276518_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.84"/>
+            <lane id=":1497276518_0_2" queueing_time="3.00" queueing_length="21.20" queueing_length_experimental="0.00"/>
+            <lane id=":1497276518_4_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="17.85"/>
+            <lane id=":1497276524_0_0" queueing_time="16.00" queueing_length="15.10" queueing_length_experimental="15.10"/>
+            <lane id=":1497276524_8_0" queueing_time="12.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":2030638872_7_0" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":2030639615_0_0" queueing_time="8.00" queueing_length="12.45" queueing_length_experimental="12.45"/>
+            <lane id=":2030639615_0_1" queueing_time="1.00" queueing_length="6.05" queueing_length_experimental="6.05"/>
+            <lane id=":4066386148_0_1" queueing_time="10.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id=":9415490903_0_1" queueing_time="4.00" queueing_length="4.54" queueing_length_experimental="4.54"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.96"/>
+            <lane id="-609752986#0_0" queueing_time="20.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="-609752987_0" queueing_time="20.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1265471308_1" queueing_time="3.00" queueing_length="4.30" queueing_length_experimental="4.30"/>
+            <lane id="1265700913_0" queueing_time="9.00" queueing_length="8.81" queueing_length_experimental="8.81"/>
+            <lane id="1265700924_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.86"/>
+            <lane id="1265700924_2" queueing_time="1.00" queueing_length="5.06" queueing_length_experimental="5.06"/>
+            <lane id="192512365#3_5" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="192512367#1_1" queueing_time="4.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512383#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.90"/>
+            <lane id="192512383#0_2" queueing_time="2.00" queueing_length="8.12" queueing_length_experimental="8.12"/>
+            <lane id="192512383#0_3" queueing_time="75.00" queueing_length="8.69" queueing_length_experimental="8.69"/>
+            <lane id="192512383#2_1" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_3" queueing_time="85.00" queueing_length="10.55" queueing_length_experimental="10.55"/>
+            <lane id="192512406#2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.71"/>
+            <lane id="330532364#2_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.46"/>
+            <lane id="604140508_0" queueing_time="14.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="604140508_1" queueing_time="17.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="609752984#2_0" queueing_time="18.00" queueing_length="16.11" queueing_length_experimental="16.11"/>
+            <lane id="725686333#3_1" queueing_time="17.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="5.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="737495706#4_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.95"/>
+            <lane id="817905978#1_0" queueing_time="31.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="2760.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="25.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":13441692405_6_0" queueing_time="26.00" queueing_length="34.25" queueing_length_experimental="34.25"/>
+            <lane id=":1497276524_6_0" queueing_time="1.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":2403042654_2_0" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":4066386148_0_2" queueing_time="3.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id=":5738098172_2_0" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490903_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.53"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.54"/>
+            <lane id=":9415490903_0_3" queueing_time="1.00" queueing_length="4.51" queueing_length_experimental="4.51"/>
+            <lane id=":cluster_13441692401_9415490899_2_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.83"/>
+            <lane id="-604819712#0_0" queueing_time="12.00" queueing_length="10.01" queueing_length_experimental="13.12"/>
+            <lane id="1465496939_0" queueing_time="49.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512383#2_1" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_2" queueing_time="3.00" queueing_length="1.93" queueing_length_experimental="1.93"/>
+            <lane id="192512383#2_3" queueing_time="8.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_2" queueing_time="29.00" queueing_length="26.55" queueing_length_experimental="26.55"/>
+            <lane id="330532357#2_1" queueing_time="2.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="330532364#2_3" queueing_time="14.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="404360199_0" queueing_time="12.00" queueing_length="7.60" queueing_length_experimental="7.60"/>
+            <lane id="404360199_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.40"/>
+            <lane id="609752980#1_0" queueing_time="26.00" queueing_length="3.11" queueing_length_experimental="3.11"/>
+            <lane id="609752984#2_0" queueing_time="8.00" queueing_length="21.71" queueing_length_experimental="17.98"/>
+            <lane id="725686333#3_2" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="817905978#1_0" queueing_time="16.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+        </lanes>
+    </data>
+    <data timestep="2820.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="13.00" queueing_length="7.39" queueing_length_experimental="7.39"/>
+            <lane id=":1497276525_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="19.18"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="5.08"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.71"/>
+            <lane id=":9415490903_0_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.60"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="13.66"/>
+            <lane id="-609552280_0" queueing_time="45.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="-609752980#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.15"/>
+            <lane id="-609752988_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.54"/>
+            <lane id="1011942070_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1465496939_0" queueing_time="32.00" queueing_length="14.01" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="54.00" queueing_length="23.71" queueing_length_experimental="23.71"/>
+            <lane id="192512383#0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.53"/>
+            <lane id="192512383#0_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.42"/>
+            <lane id="192512383#2_3" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="192512411#1_0" queueing_time="18.00" queueing_length="17.04" queueing_length_experimental="17.04"/>
+            <lane id="226262555#4_2" queueing_time="15.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="404360199_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="609752984#2_0" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="737495706#4_0" queueing_time="8.00" queueing_length="10.30" queueing_length_experimental="10.30"/>
+        </lanes>
+    </data>
+    <data timestep="2880.00">
+        <lanes>
+            <lane id=":1497276524_4_0" queueing_time="11.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_5_0" queueing_time="10.00" queueing_length="19.17" queueing_length_experimental="0.00"/>
+            <lane id=":1497276524_6_0" queueing_time="12.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_7_0" queueing_time="7.00" queueing_length="14.73" queueing_length_experimental="0.00"/>
+            <lane id=":9415490903_0_2" queueing_time="1.00" queueing_length="1.80" queueing_length_experimental="1.80"/>
+            <lane id=":9415490903_0_3" queueing_time="15.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="-609752980#0_0" queueing_time="13.00" queueing_length="13.20" queueing_length_experimental="13.20"/>
+            <lane id="-609752987_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.92"/>
+            <lane id="1011942070_0" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1265700913_2" queueing_time="5.00" queueing_length="6.28" queueing_length_experimental="6.28"/>
+            <lane id="1265700913_3" queueing_time="4.00" queueing_length="11.48" queueing_length_experimental="11.48"/>
+            <lane id="192512367#1_3" queueing_time="26.00" queueing_length="11.40" queueing_length_experimental="14.24"/>
+            <lane id="192512383#0_3" queueing_time="6.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="404360199_0" queueing_time="1.00" queueing_length="1.99" queueing_length_experimental="4.91"/>
+            <lane id="725686333#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.91"/>
+            <lane id="817905978#1_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.21"/>
+        </lanes>
+    </data>
+    <data timestep="2940.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="25.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_0_0" queueing_time="16.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":1497276524_8_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.62"/>
+            <lane id=":5775221674_2_0" queueing_time="42.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":5775221677_8_0" queueing_time="16.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":9415490897_0_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.16"/>
+            <lane id="-609752980#0_0" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="13.57"/>
+            <lane id="-609752983_0" queueing_time="14.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="192512406#2_0" queueing_time="12.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="226262555#4_2" queueing_time="16.00" queueing_length="28.22" queueing_length_experimental="28.22"/>
+            <lane id="330532364#2_3" queueing_time="26.00" queueing_length="7.50" queueing_length_experimental="4.70"/>
+            <lane id="609752984#2_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="4.70"/>
+            <lane id="817905978#1_0" queueing_time="12.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+        </lanes>
+    </data>
+    <data timestep="3000.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id=":9415490903_0_3" queueing_time="2.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id="-609752980#0_0" queueing_time="1.00" queueing_length="21.74" queueing_length_experimental="28.77"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.15"/>
+            <lane id="1465496939_0" queueing_time="43.00" queueing_length="14.40" queueing_length_experimental="8.60"/>
+            <lane id="192512383#2_2" queueing_time="3.00" queueing_length="1.94" queueing_length_experimental="1.94"/>
+            <lane id="192512383#2_3" queueing_time="6.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_1" queueing_time="1.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_2" queueing_time="20.00" queueing_length="14.30" queueing_length_experimental="14.30"/>
+            <lane id="609752984#2_0" queueing_time="33.00" queueing_length="16.00" queueing_length_experimental="16.00"/>
+            <lane id="725686333#1_2" queueing_time="6.00" queueing_length="4.27" queueing_length_experimental="4.27"/>
+            <lane id="737495706#4_0" queueing_time="6.00" queueing_length="10.50" queueing_length_experimental="10.50"/>
+        </lanes>
+    </data>
+    <data timestep="3060.00">
+        <lanes>
+            <lane id=":2030639615_0_0" queueing_time="1.00" queueing_length="3.06" queueing_length_experimental="3.06"/>
+            <lane id=":2030639615_0_1" queueing_time="10.00" queueing_length="9.75" queueing_length_experimental="9.75"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.12"/>
+            <lane id=":9415490903_0_3" queueing_time="13.00" queueing_length="7.00" queueing_length_experimental="7.00"/>
+            <lane id="-604819712#0_0" queueing_time="2.00" queueing_length="13.30" queueing_length_experimental="13.30"/>
+            <lane id="-609752980#0_0" queueing_time="4.00" queueing_length="10.58" queueing_length_experimental="10.58"/>
+            <lane id="1465496939_0" queueing_time="16.00" queueing_length="8.41" queueing_length_experimental="8.41"/>
+            <lane id="192512367#1_0" queueing_time="31.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512367#1_3" queueing_time="36.00" queueing_length="21.10" queueing_length_experimental="24.23"/>
+            <lane id="192512383#0_3" queueing_time="3.00" queueing_length="2.50" queueing_length_experimental="2.50"/>
+            <lane id="192512383#2_3" queueing_time="21.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="604140508_0" queueing_time="15.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="604140508_1" queueing_time="14.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="604819712#1_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.31"/>
+            <lane id="609752984#2_0" queueing_time="10.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+        </lanes>
+    </data>
+    <data timestep="3120.00">
+        <lanes>
+            <lane id=":1497276524_6_0" queueing_time="1.00" queueing_length="1.93" queueing_length_experimental="1.93"/>
+            <lane id=":9415490903_0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.57"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="7.85"/>
+            <lane id=":9415490903_0_3" queueing_time="5.00" queueing_length="4.50" queueing_length_experimental="4.50"/>
+            <lane id="-604819712#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="1.94"/>
+            <lane id="-609752983_0" queueing_time="2.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_0" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512367#1_3" queueing_time="12.00" queueing_length="18.10" queueing_length_experimental="18.10"/>
+            <lane id="192512383#2_1" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512383#2_2" queueing_time="3.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id="192512383#2_3" queueing_time="12.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="9.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+        </lanes>
+    </data>
+    <data timestep="3180.00">
+        <lanes>
+            <lane id=":1497276524_0_0" queueing_time="10.00" queueing_length="5.40" queueing_length_experimental="5.40"/>
+            <lane id=":2030638872_5_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":2030638872_6_0" queueing_time="4.00" queueing_length="19.07" queueing_length_experimental="0.00"/>
+            <lane id=":2030638872_7_0" queueing_time="10.00" queueing_length="7.20" queueing_length_experimental="4.40"/>
+            <lane id="-604819712#0_0" queueing_time="3.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="-609752983_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="8.04"/>
+            <lane id="1011942070_0" queueing_time="2.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="226262555#4_2" queueing_time="20.00" queueing_length="17.01" queueing_length_experimental="17.01"/>
+            <lane id="330532357#2_1" queueing_time="1.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="330532364#2_2" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="330532364#2_3" queueing_time="33.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="604140508_1" queueing_time="1.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="609752984#2_0" queueing_time="3.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="737495706#4_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="977346734_3" queueing_time="7.00" queueing_length="10.11" queueing_length_experimental="10.11"/>
+        </lanes>
+    </data>
+    <data timestep="3240.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="28.00" queueing_length="10.03" queueing_length_experimental="10.03"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.24"/>
+            <lane id="1465496939_0" queueing_time="43.00" queueing_length="10.89" queueing_length_experimental="10.89"/>
+            <lane id="192512367#1_3" queueing_time="50.00" queueing_length="32.31" queueing_length_experimental="23.71"/>
+            <lane id="192512406#1_0" queueing_time="1.00" queueing_length="5.60" queueing_length_experimental="8.48"/>
+            <lane id="226262555#4_2" queueing_time="1.00" queueing_length="2.81" queueing_length_experimental="8.71"/>
+            <lane id="53551383#0_1" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="3.12"/>
+            <lane id="609752984#2_0" queueing_time="8.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+        </lanes>
+    </data>
+    <data timestep="3300.00">
+        <lanes>
+            <lane id=":1497276524_6_0" queueing_time="1.00" queueing_length="1.93" queueing_length_experimental="1.93"/>
+            <lane id=":2030638872_7_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.45"/>
+            <lane id=":9415490903_0_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.05"/>
+            <lane id="-609752980#0_0" queueing_time="4.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="-609752983_0" queueing_time="2.00" queueing_length="4.70" queueing_length_experimental="7.79"/>
+            <lane id="1465496939_0" queueing_time="10.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id="192512367#1_3" queueing_time="15.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="817905978#1_0" queueing_time="42.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
+            <lane id="817905978#1_1" queueing_time="18.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+        </lanes>
+    </data>
+    <data timestep="3360.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="6.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id=":1497276524_0_0" queueing_time="24.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id=":1497276524_3_0" queueing_time="2.00" queueing_length="10.69" queueing_length_experimental="10.69"/>
+            <lane id=":1497276524_6_0" queueing_time="7.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":1497276524_7_0" queueing_time="4.00" queueing_length="17.73" queueing_length_experimental="0.00"/>
+            <lane id=":1497276524_8_0" queueing_time="6.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":1497276524_9_0" queueing_time="20.00" queueing_length="2.60" queueing_length_experimental="2.60"/>
+            <lane id=":1497276524_10_0" queueing_time="28.00" queueing_length="8.40" queueing_length_experimental="8.40"/>
+            <lane id=":9415490903_0_3" queueing_time="7.00" queueing_length="7.30" queueing_length_experimental="4.50"/>
+            <lane id="-604819712#0_0" queueing_time="3.00" queueing_length="4.74" queueing_length_experimental="17.92"/>
+            <lane id="-609752986#0_0" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="1011942070_1" queueing_time="5.00" queueing_length="7.60" queueing_length_experimental="10.50"/>
+            <lane id="192512383#0_3" queueing_time="4.00" queueing_length="2.81" queueing_length_experimental="2.81"/>
+            <lane id="192512383#2_2" queueing_time="10.00" queueing_length="10.60" queueing_length_experimental="10.60"/>
+            <lane id="192512383#2_3" queueing_time="9.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="226262555#4_0" queueing_time="36.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="226262555#4_1" queueing_time="33.00" queueing_length="8.60" queueing_length_experimental="8.60"/>
+            <lane id="226262555#4_2" queueing_time="27.00" queueing_length="11.21" queueing_length_experimental="11.21"/>
+            <lane id="330532364#2_1" queueing_time="3.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id="604140508_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="2.15"/>
+            <lane id="604140508_1" queueing_time="10.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="610082005_0" queueing_time="14.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="3420.00">
+        <lanes>
+            <lane id=":13441692405_6_0" queueing_time="29.00" queueing_length="40.78" queueing_length_experimental="40.78"/>
+            <lane id=":1497276524_0_0" queueing_time="3.00" queueing_length="8.30" queueing_length_experimental="8.30"/>
+            <lane id="1265700913_0" queueing_time="1.00" queueing_length="2.02" queueing_length_experimental="2.02"/>
+            <lane id="192512367#1_3" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="10.25"/>
+            <lane id="226262555#4_2" queueing_time="20.00" queueing_length="17.92" queueing_length_experimental="17.92"/>
+            <lane id="330532364#2_3" queueing_time="16.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="3480.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="14.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id=":13441692405_6_0" queueing_time="20.00" queueing_length="8.45" queueing_length_experimental="8.45"/>
+            <lane id=":2403042654_2_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="9.38"/>
+            <lane id=":9415490903_0_2" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.53"/>
+            <lane id=":9415490903_0_3" queueing_time="7.00" queueing_length="7.50" queueing_length_experimental="7.50"/>
+            <lane id="-609552280_0" queueing_time="5.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="-609752987_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="4.49"/>
+            <lane id="1465496939_0" queueing_time="35.00" queueing_length="12.30" queueing_length_experimental="12.30"/>
+            <lane id="192512367#1_0" queueing_time="22.00" queueing_length="2.80" queueing_length_experimental="2.80"/>
+            <lane id="192512367#1_3" queueing_time="29.00" queueing_length="11.30" queueing_length_experimental="11.30"/>
+            <lane id="192512383#2_2" queueing_time="5.00" queueing_length="1.91" queueing_length_experimental="1.91"/>
+            <lane id="192512383#2_3" queueing_time="13.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="725686333#3_2" queueing_time="3.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+        </lanes>
+    </data>
+    <data timestep="3540.00">
+        <lanes>
+            <lane id=":12307718619_5_0" queueing_time="24.00" queueing_length="7.70" queueing_length_experimental="7.70"/>
+            <lane id=":2030639615_0_0" queueing_time="7.00" queueing_length="2.75" queueing_length_experimental="2.75"/>
+            <lane id=":2030639615_0_1" queueing_time="12.00" queueing_length="5.50" queueing_length_experimental="2.70"/>
+            <lane id="-1330231655_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="11.62"/>
+            <lane id="-609752980#0_0" queueing_time="0.00" queueing_length="0.00" queueing_length_experimental="12.40"/>
+            <lane id="-609752983_0" queueing_time="12.00" queueing_length="12.80" queueing_length_experimental="15.64"/>
+            <lane id="1011942071_0" queueing_time="2.00" queueing_length="4.78" queueing_length_experimental="4.78"/>
+            <lane id="1011942071_1" queueing_time="2.00" queueing_length="3.81" queueing_length_experimental="3.81"/>
+            <lane id="192512383#2_1" queueing_time="1.00" queueing_length="1.92" queueing_length_experimental="1.92"/>
+            <lane id="192512383#2_3" queueing_time="4.00" queueing_length="1.90" queueing_length_experimental="1.90"/>
+            <lane id="192512406#2_0" queueing_time="16.00" queueing_length="4.70" queueing_length_experimental="4.70"/>
+            <lane id="226262555#4_2" queueing_time="4.00" queueing_length="42.81" queueing_length_experimental="39.82"/>
+            <lane id="53551383#0_2" queueing_time="8.00" queueing_length="5.30" queueing_length_experimental="5.30"/>
+            <lane id="604140508_0" queueing_time="19.00" queueing_length="4.40" queueing_length_experimental="4.40"/>
+            <lane id="604140508_1" queueing_time="23.00" queueing_length="4.35" queueing_length_experimental="4.35"/>
+            <lane id="817905978#1_0" queueing_time="17.00" queueing_length="5.60" queueing_length_experimental="5.60"/>
         </lanes>
     </data>
 </queue-export>
