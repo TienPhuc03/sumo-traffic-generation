@@ -40,4 +40,8 @@ Thumbs.db
 # SUMO temporary / log outputs
 *.log
 
+# Large raw/CSV simulation outputs (reproducible via run_multi_seed.py & xml_to_csv.py)
+data/raw/
+data/csv/
+
 
