@@ -20,7 +20,14 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+for _s in (sys.stdout, sys.stderr):
+    if _s.encoding != 'utf-8':
+        try:
+            _s.reconfigure(encoding='utf-8')
+        except Exception:
+            pass
+
+ROOT =os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCENARIOS = ['offpeak', 'baseline', 'peak', 'congestion', 'tls_optimized', 'tls_actuated']
 
 

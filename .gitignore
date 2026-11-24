@@ -44,4 +44,11 @@ Thumbs.db
 data/raw/
 data/csv/
 
+Claude outputs/
+
+# Bộ dữ liệu giao nộp: chỉ commit README + manifest (emission.csv > 100 MB, giới hạn GitHub)
+release/*.csv
+!release/manifest.csv
+
+
 

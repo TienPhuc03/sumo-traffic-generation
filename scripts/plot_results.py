@@ -98,54 +98,106 @@ def load_data(data_dir):
                 
     return summary_dfs, tripinfo_dfs, pd.DataFrame(kpi_records)
 
-def plot_fundamental_diagram(data_dir):
-    """Vẽ biểu đồ Fundamental Diagram (Task 8.1) từ dữ liệu detector đã làm sạch (Task 7.2)"""
+DETECTOR_PERIOD_S = 900  # freq="900.0" trong routes/detectors.add.xml
+
+
+def load_detector_points(data_dir):
+    """Đọc detector E1 của mọi (kịch bản, seed) trong data/raw/<kịch_bản>/seed_<n>/detector.xml.
+    Nếu chưa có data/raw thì dùng data/detector_output_cleaned.csv (1 lần chạy, 1 kịch bản)."""
+    raw = os.path.join(data_dir, 'raw')
+    rows = []
+    for key, _, _ in SCENARIOS:
+        sc_dir = os.path.join(raw, key)
+        if not os.path.isdir(sc_dir):
+            continue
+        for sd in sorted(os.listdir(sc_dir)):
+            p = os.path.join(sc_dir, sd, 'detector.xml')
+            if sd.startswith('seed_') and os.path.exists(p):
+                for _, el in ET.iterparse(p):
+                    if el.tag == 'interval':
+                        rows.append({'scenario': key, 'seed': int(sd[5:]), 'id': el.get('id'),
+                                     'begin': float(el.get('begin')), 'end': float(el.get('end')),
+                                     'nVehContrib': int(el.get('nVehContrib')), 'speed': float(el.get('speed'))})
+                        el.clear()
+    if rows:
+        df = pd.DataFrame(rows)
+        n_runs = df[['scenario', 'seed']].drop_duplicates().shape[0]
+        return df, f'Nguồn: data/raw/*/seed_*/detector.xml — {df["scenario"].nunique()} kịch bản, {n_runs} lần chạy, 12 detector E1, chu kỳ 900 s'
     csv_path = os.path.join(data_dir, 'detector_output_cleaned.csv')
     if not os.path.exists(csv_path):
-        print("Chưa tìm thấy file detector_output_cleaned.csv từ Task 7.2. Bỏ qua vẽ Fundamental Diagram.")
-        return
-
+        return pd.DataFrame(), ''
     df = pd.read_csv(csv_path)
+    df['scenario'] = 'tls_actuated'  # detector_output.xml bị ghi đè mỗi lần chạy; bản hiện có là tls_actuated
+    return df, 'Nguồn: data/detector_output_cleaned.csv — CHỈ 1 lần chạy (tls_actuated), 12 detector E1, chu kỳ 900 s'
+
+
+def plot_fundamental_diagram(data_dir):
+    """Vẽ biểu đồ Fundamental Diagram (Task 8.1) từ detector E1 (chu kỳ 900 s)."""
+    df, source = load_detector_points(data_dir)
     if df.empty:
+        print("Chưa có dữ liệu detector (data/raw/ hoặc detector_output_cleaned.csv). Bỏ qua Fundamental Diagram.")
         return
 
-    # Tính toán lưu lượng (flow - xe/h) và mật độ (density - xe/km)
-    if 'nVehContrib' in df.columns and 'speed' in df.columns:
-        df['flow'] = df['nVehContrib'] * 60  # Quy đổi sang xe/h
-        df['density'] = df['flow'] / (df['speed'] * 3.6 + 1e-5)  # Tránh chia cho 0
+    # q (xe/h) = N × 3600 / Δt, Δt = 900 s  ->  q = nVehContrib × 4
+    df['flow'] = df['nVehContrib'] * 3600 / DETECTOR_PERIOD_S
+    assert (df['flow'] == df['nVehContrib'] * 4).all(), 'flow phải bằng nVehContrib × 4'
+    # Bỏ khung không có xe (speed = -1 hoặc 0) vì không xác định được mật độ k = q / v
+    df = df[(df['speed'] > 0) & (df['nVehContrib'] > 0)].copy()
+    df['speed_kmh'] = df['speed'] * 3.6
+    df['density'] = df['flow'] / df['speed_kmh']
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-    fig.suptitle('PHÂN TÍCH QUAN HỆ LƯU LƯỢNG - MẬT ĐỘ - VẬN TỐC (TASK 8.1)', fontsize=15, fontweight='bold', y=0.98)
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6.4))
+    fig.suptitle('PHÂN TÍCH QUAN HỆ LƯU LƯỢNG - MẬT ĐỘ - VẬN TỐC (TASK 8.1)', fontsize=15, fontweight='bold', y=0.99)
+    fig.text(0.5, 0.925, f'{source}. q = nVehContrib × 4 (xe/h), k = q / v', ha='center', fontsize=10, style='italic')
 
-    # 1. Lưu lượng - Mật độ (Q - K)
-    if 'density' in df.columns and 'flow' in df.columns:
-        axes[0].scatter(df['density'], df['flow'], color='#3498db', alpha=0.6, edgecolors='k')
-        axes[0].set_title('Quan hệ Lưu lượng - Mật độ (Flow vs Density)', fontsize=13, fontweight='bold')
-        axes[0].set_xlabel('Mật độ (xe/km)', fontsize=11)
-        axes[0].set_ylabel('Lưu lượng (xe/h)', fontsize=11)
-        axes[0].grid(True, linestyle='--', alpha=0.7)
+    for key, label, color in SCENARIOS:
+        d = df[df['scenario'] == key]
+        if d.empty:
+            continue
+        axes[0].scatter(d['density'], d['flow'], color=color, alpha=0.6, edgecolors='k', linewidths=0.4, label=label)
+        axes[1].scatter(d['density'], d['speed_kmh'], color=color, alpha=0.6, edgecolors='k', linewidths=0.4, label=label)
 
-    # 2. Vận tốc - Mật độ (V - K)
-    if 'density' in df.columns and 'speed' in df.columns:
-        axes[1].scatter(df['density'], df['speed'] * 3.6, color='#e74c3c', alpha=0.6, edgecolors='k')
-        axes[1].set_title('Quan hệ Vận tốc - Mật độ (Speed vs Density)', fontsize=13, fontweight='bold')
-        axes[1].set_xlabel('Mật độ (xe/km)', fontsize=11)
-        axes[1].set_ylabel('Vận tốc trung bình (km/h)', fontsize=11)
-        axes[1].grid(True, linestyle='--', alpha=0.7)
+    axes[0].set_title('Quan hệ Lưu lượng - Mật độ (Flow vs Density)', fontsize=13, fontweight='bold')
+    axes[0].set_ylabel('Lưu lượng (xe/h)', fontsize=11)
+    axes[1].set_title('Quan hệ Vận tốc - Mật độ (Speed vs Density)', fontsize=13, fontweight='bold')
+    axes[1].set_ylabel('Vận tốc trung bình thời gian (km/h)', fontsize=11)
+    for ax in axes:
+        ax.set_xlabel('Mật độ (xe/km)', fontsize=11)
+        ax.grid(True, linestyle='--', alpha=0.7)
+        ax.legend(fontsize=9)
+    fig.tight_layout(rect=(0, 0, 1, 0.91))
 
-    plt.tight_layout()
     output_path = os.path.join(data_dir, 'traffic_fundamental_diagram.png')
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"-> Đã lưu biểu đồ Fundamental Diagram (Task 8.1) tại: {output_path}")
 
-def plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, output_dir):
+def apply_multi_seed_kpi(data_dir, df_kpi):
+    """Panel 1-2: thay KPI 1 lần chạy bằng trung bình ± độ lệch chuẩn các seed trong
+    data/analysis/kpi_per_seed.csv (cùng công thức với reliability.csv). Thiếu file thì giữ nguyên."""
+    p = os.path.join(data_dir, 'analysis', 'kpi_per_seed.csv')
+    if df_kpi.empty or not os.path.exists(p):
+        return df_kpi, 'data/tripinfo_*.xml (1 lần chạy, seed mặc định)'
+    cols = {'avg_speed': 'van_toc_tb_kmh', 'avg_wait': 'tg_cho_tb_s', 'avg_timeloss': 'tg_mat_mat_tb_s'}
+    g = pd.read_csv(p, encoding='utf-8-sig').groupby('scenario')[list(cols.values())]
+    mean, std = g.mean(), g.std()
+    df_kpi = df_kpi[df_kpi['key'].isin(mean.index)].copy()
+    for new, old in cols.items():
+        df_kpi[new] = df_kpi['key'].map(mean[old])
+        df_kpi[new + '_std'] = df_kpi['key'].map(std[old])
+    return df_kpi, f'data/analysis/kpi_per_seed.csv (TB ± độ lệch chuẩn {g.size().min()} seed)'
+
+
+def plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, output_dir, kpi_src=''):
     fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-    fig.suptitle('HỆ THỐNG MÔ PHỎNG & SO SÁNH CÁC KỊCH BẢN GIAO THÔNG (NGÃ TƯ HÀNG XANH)', fontsize=16, fontweight='bold', y=0.98)
-    
+    fig.suptitle('HỆ THỐNG MÔ PHỎNG & SO SÁNH CÁC KỊCH BẢN GIAO THÔNG (NGÃ TƯ HÀNG XANH)', fontsize=16, fontweight='bold', y=0.995)
+    fig.text(0.5, 0.962, va='top', s=f'Panel 1-2: {kpi_src}  |  Panel 3-4: data/summary_*.xml, data/tripinfo_*.xml (1 lần chạy mỗi kịch bản)',
+             ha='center', fontsize=10, style='italic')
+
     # 1. Biểu đồ Vận tốc trung bình
     ax1 = axes[0, 0]
     if not df_kpi.empty:
-        bars = ax1.bar(df_kpi['scenario'], df_kpi['avg_speed'], color=df_kpi['color'], edgecolor='black', alpha=0.85)
+        bars = ax1.bar(df_kpi['scenario'], df_kpi['avg_speed'], yerr=df_kpi.get('avg_speed_std'), capsize=4,
+                       color=df_kpi['color'], edgecolor='black', alpha=0.85)
         ax1.set_title('1. Vận tốc Trung bình qua Nút giao (km/h)', fontsize=13, fontweight='bold')
         ax1.set_ylabel('Vận tốc (km/h)', fontsize=11)
         ax1.tick_params(axis='x', rotation=25)
@@ -161,8 +213,10 @@ def plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, output_dir):
     if not df_kpi.empty:
         x = range(len(df_kpi))
         width = 0.35
-        ax2.bar([i - width/2 for i in x], df_kpi['avg_wait'], width=width, label='Thời gian chờ', color='#e74c3c', alpha=0.85)
-        ax2.bar([i + width/2 for i in x], df_kpi['avg_timeloss'], width=width, label='Tổn thất độ trễ', color='#f39c12', alpha=0.85)
+        ax2.bar([i - width/2 for i in x], df_kpi['avg_wait'], width=width, yerr=df_kpi.get('avg_wait_std'), capsize=3,
+                label='Thời gian chờ', color='#e74c3c', alpha=0.85)
+        ax2.bar([i + width/2 for i in x], df_kpi['avg_timeloss'], width=width, yerr=df_kpi.get('avg_timeloss_std'), capsize=3,
+                label='Tổn thất độ trễ', color='#f39c12', alpha=0.85)
         ax2.set_title('2. Thời gian Dừng chờ & Tổn thất Độ trễ Trung bình (s)', fontsize=13, fontweight='bold')
         ax2.set_ylabel('Thời gian (giây)', fontsize=11)
         ax2.set_xticks(list(x))
@@ -189,14 +243,14 @@ def plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, output_dir):
         peak_df = peak_df.copy()
         peak_df['vtype_vn'] = peak_df['vType'].map(vtype_names).fillna(peak_df['vType'])
         palette = {'Xe máy': '#e74c3c', 'Ô tô con': '#2ecc71', 'Xe buýt': '#3498db', 'Xe tải': '#f1c40f'}
-        sns.boxplot(data=peak_df, x='vtype_vn', y='waitingTime', palette=palette, ax=ax4)
+        sns.boxplot(data=peak_df, x='vtype_vn', y='waitingTime', hue='vtype_vn', palette=palette, legend=False, ax=ax4)
         ax4.set_title('4. Phân bố Thời gian Chờ theo Loại Xe (Giờ cao điểm)', fontsize=13, fontweight='bold')
         ax4.set_xlabel('Loại phương tiện', fontsize=11)
         ax4.set_ylabel('Thời gian chờ (giây)', fontsize=11)
     else:
         ax4.text(0.5, 0.5, 'Chưa có đủ dữ liệu tripinfo', ha='center', va='center')
         
-    plt.tight_layout()
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
     output_path = os.path.join(output_dir, 'traffic_comparison_dashboard.png')
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"-> Đã lưu biểu đồ tổng hợp chất lượng cao tại: {output_path}")
@@ -213,7 +267,8 @@ def main():
     # Chạy vẽ Dashboard so sánh các kịch bản
     summary_dfs, tripinfo_dfs, df_kpi = load_data(data_dir)
     if not df_kpi.empty:
-        plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, data_dir)
+        df_kpi, kpi_src = apply_multi_seed_kpi(data_dir, df_kpi)
+        plot_dashboard(summary_dfs, tripinfo_dfs, df_kpi, data_dir, kpi_src)
     else:
         print("Cảnh báo: Chưa tìm thấy dữ liệu kịch bản trong data/ cho dashboard tổng hợp.")
 

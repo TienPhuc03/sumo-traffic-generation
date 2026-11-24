@@ -45,8 +45,10 @@ Ghi nhận theo từng phương tiện khi kết thúc chuyến hoặc kết th�
 | `CO_abs`, `CO2_abs`, `HC_abs`, `PMx_abs`, `NOx_abs` | mg | Tổng khối lượng các chất khí thải tích lũy suốt chuyến (mô hình `HBEFA4`) |
 | `fuel_abs`, `electricity_abs` | mg, Wh | Tổng nhiên liệu tiêu thụ (`mg`) và điện năng tiêu thụ (`Wh`) cả chuyến |
 
+> **Chu kỳ lấy mẫu theo nơi lưu.** `configs/*.sumocfg` đặt `60 s` cho summary, queue và emission. Đây là chu kỳ của `data/*_<kịch_bản>.xml`, do `run_all_scenarios.py` ghi. `run_multi_seed.py` ghi đè chu kỳ thành **`30 s`** cho `data/raw/` và do đó cả `data/csv/`, để gộp được theo khoảng 30 s (Task 7.3). Chu kỳ lấy mẫu không làm thay đổi động học mô phỏng.
+
 ### 2.2. Dữ liệu toàn mạng theo thời gian — `summary.csv` (nguồn `summary.xml`)
-Chu kỳ lấy mẫu: **`60 s`** (`summary-output.period="60"`), từ `t = 0 s` đến `t = 3600 s`.
+Chu kỳ lấy mẫu: **`30 s`** trong `data/csv/` (`--summary-output.period 30`), **`60 s`** trong `data/summary_*.xml`. Mẫu từ `t = 0 s` đến `t = 3570 s`.
 
 | Trường CSV | Đơn vị | Ý nghĩa |
 | :--- | :--- | :--- |
@@ -62,7 +64,7 @@ Chu kỳ lấy mẫu: **`60 s`** (`summary-output.period="60"`), từ `t = 0 s` 
 | `duration` | ms | Thời gian CPU xử lý bước mô phỏng |
 
 ### 2.3. Dữ liệu hàng đợi tại làn đường — `queue.csv` (nguồn `queue.xml`)
-Chu kỳ lấy mẫu: **`60 s`** (`queue-output.period="60"`). Mỗi hàng ghi nhận một làn có hàng đợi khác rỗng tại `timestep`.
+Chu kỳ lấy mẫu: **`30 s`** trong `data/csv/`, **`60 s`** trong `data/queue_*.xml` (`queue-output.period`). Mỗi hàng ghi nhận một làn có hàng đợi khác rỗng tại `timestep`.
 
 | Trường CSV | Đơn vị | Ý nghĩa |
 | :--- | :--- | :--- |
@@ -91,6 +93,11 @@ Thống kê tổng hợp trên toàn chu kỳ mô phỏng (`begin = 0.00`, `end 
 ### 2.5. Dữ liệu vòng cảm ứng từ E1 — `detector.csv` (nguồn `detector.xml` / `detectors.add.xml`)
 Gồm **12 vòng cảm ứng E1** đặt tại các nhánh chính quanh vòng xoay Hàng Xanh, chu kỳ lấy mẫu **`900 s`** (`freq="900.0"`, tương ứng 4 khung 15 phút trong 1 giờ mô phỏng).
 
+Tên file XML gốc khác nhau theo nơi lưu:
+- `data/detector_output.xml`: SUMO ghi trực tiếp theo đường dẫn trong `routes/detectors.add.xml`. File **bị ghi đè sau mỗi lần chạy**, nên chỉ giữ lần chạy gần nhất.
+- `data/raw/<kịch_bản>/seed_<n>/detector.xml`: bản copy của file trên sau từng lần chạy, do `run_multi_seed.py` tạo. `detector.csv` được tạo từ các file này.
+- Tương tự, `data/edgedata_output.xml` (edgeData 3600 s trong `detectors.add.xml`) được copy thành `data/raw/.../edgedata_detector.xml`. File này không chuyển sang CSV.
+
 | Trường CSV | Đơn vị | Ý nghĩa |
 | :--- | :--- | :--- |
 | `begin`, `end` | s | Thời điểm đầu và cuối chu kỳ 15 phút (`0–900`, `900–1800`, `1800–2700`, `2700–3600`) |
@@ -102,7 +109,7 @@ Gồm **12 vòng cảm ứng E1** đặt tại các nhánh chính quanh vòng xo
 | `length` | m | Chiều dài trung bình của các phương tiện đi qua (`-1.00` nếu không có xe) |
 
 ### 2.6. Dữ liệu phát thải tức thời — `emission.csv` (nguồn `emission.xml`)
-Chu kỳ lấy mẫu: **`60 s`** (`device.emissions.period="60"`, `device.emissions.probability="1.0"`), theo mô hình phát thải `HBEFA4` của SUMO cho từng xe đang lưu thông.
+Chu kỳ lấy mẫu: **`30 s`** trong `data/csv/`, **`60 s`** trong `data/emission_*.xml` (`device.emissions.period`, `device.emissions.probability="1.0"`), theo mô hình phát thải `HBEFA4` của SUMO cho từng xe đang lưu thông. Các cột là **tốc độ tức thời**. Để ra khối lượng, nhân với chu kỳ lấy mẫu: `Σ CO2 (mg/s) × Δt`.
 
 | Trường CSV | Đơn vị | Ý nghĩa |
 | :--- | :--- | :--- |
@@ -112,6 +119,9 @@ Chu kỳ lấy mẫu: **`60 s`** (`device.emissions.period="60"`, `device.emissi
 | `noise` | dBA | Mức ồn phát sinh tại vị trí phương tiện |
 | `waiting`, `speed`, `angle` | s, m/s, độ | Thời gian dừng tích lũy hiện tại, vận tốc tức thời và góc hướng chuyển động |
 | `route`, `lane`, `pos`, `x`, `y` | chuỗi, m | Tuyến đi, làn hiện tại, vị trí trên làn và tọa độ phẳng (m) |
+
+### 2.7. Bảng gộp theo khoảng thời gian — `aggregated_30s.csv` (Task 7.3)
+Do `scripts/aggregate_intervals.py` tạo từ `data/raw/`, gồm 1 dòng cho mỗi (kịch bản, seed, khoảng 30 s), kèm dòng theo làn cho hàng đợi. Định nghĩa cột xem docstring của script và `release/README.md`.
 
 ---
 
