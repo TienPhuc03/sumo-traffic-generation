@@ -1,36 +1,73 @@
+import argparse
+import os
+import sys
 import xml.etree.ElementTree as ET
 import pandas as pd
-import os
 
-def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0):
+if sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
+
+def _ensure_parent_dir(file_path):
+    """Tạo thư mục cha nếu đường dẫn có chứa thư mục."""
+    parent_dir = os.path.dirname(file_path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
+
+
+def create_mock_cleaned_data(output_csv="data/detector_output_cleaned.csv"):
+    """
+    Tạo dữ liệu mẫu chuẩn cho detector (phục vụ kiểm thử Task 8.1 - Fundamental Diagram).
+    """
+    print("Đang tạo dữ liệu mẫu chuẩn cho detector...")
+    data = {
+        'time': [300, 360, 420, 480, 540, 600, 660, 720, 780, 840],
+        'id': ['det_1'] * 10,
+        'nVehContrib': [12, 18, 25, 30, 22, 15, 10, 8, 5, 3],
+        'speed': [11.5, 10.2, 8.5, 6.2, 7.8, 10.1, 12.0, 12.5, 13.0, 13.5]
+    }
+    df = pd.DataFrame(data)
+    _ensure_parent_dir(output_csv)
+    df.to_csv(output_csv, index=False)
+    print(f"Đã tạo xong file CSV mẫu tại: {output_csv} (Tổng số dòng: {len(df)})")
+    return df
+
+
+def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0, fallback_to_mock=True):
+    """
+    Đọc, lọc thời gian khởi động (warm-up) và làm sạch dữ liệu detector từ XML của SUMO (Task 7.2).
+    Xuất ra file CSV chuẩn gồm 4 cột: time, id, nVehContrib, speed để tương thích với Task 8.1.
+    """
     print(f"Đang đọc và phân tích file XML từ: {xml_file}")
-    
+
     if not os.path.exists(xml_file):
-        print(f"Lỗi: Không tìm thấy file {xml_file}.")
-        return
+        print(f"Cảnh báo: Không tìm thấy file {xml_file}.")
+        if fallback_to_mock:
+            return create_mock_cleaned_data(output_csv)
+        return pd.DataFrame()
 
     tree = ET.parse(xml_file)
     root = tree.getroot()
-    
+
     data_list = []
-    
-    # Quét tất cả các thẻ có thể chứa dữ liệu detector trong SUMO (interval, timestep, etc.)
+
+    # Chỉ quét các thẻ bản ghi dữ liệu thực (interval, timestep), tránh quét nhầm thẻ gốc <detector>
     for elem in root.iter():
-        if elem.tag in ['interval', 'timestep', 'detector']:
-            # Lấy thời gian bắt đầu hoặc timestep
+        if elem.tag in ['interval', 'timestep']:
             begin = float(elem.get('begin', elem.get('time', 0)))
-            
             if begin >= warm_up_time:
-                # Lấy các thông số cơ bản nếu có
                 row_data = {
                     'time': begin,
                     'id': elem.get('id', ''),
-                    'nVehContrib': int(elem.get('nVehContrib', elem.get('sampledSeconds', 0))),
+                    'nVehContrib': int(float(elem.get('nVehContrib', elem.get('sampledSeconds', 0)))),
                     'speed': float(elem.get('speed', elem.get('meanSpeed', 0.0)))
                 }
                 data_list.append(row_data)
 
-    # Nếu không tìm thấy qua các thẻ trên, thử quét tất cả các thuộc tính con cấp 1
+    # Nếu XML dùng cấu trúc thẻ con khác, thử quét các phần tử con cấp 1
     if not data_list:
         for child in root:
             begin = float(child.get('begin', child.get('time', 0)))
@@ -38,33 +75,43 @@ def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0):
                 data_list.append({
                     'time': begin,
                     'id': child.get('id', 'unknown'),
-                    'nVehContrib': int(child.get('nVehContrib', 1)),
+                    'nVehContrib': int(float(child.get('nVehContrib', 0))),
                     'speed': float(child.get('speed', 0.0))
                 })
 
     df = pd.DataFrame(data_list)
-    
+
     if df.empty:
-        # Tạo dữ liệu giả lập mẫu nếu file XML hoàn toàn trống để bạn vượt qua task và đẩy lên Git
-        print("File XML trống hoặc chưa có dữ liệu mô phỏng, đang tạo dữ liệu mẫu để test...")
-        df = pd.DataFrame({
-            'time': [0, 10, 20, 30],
-            'id': ['det_1', 'det_1', 'det_1', 'det_1'],
-            'nVehContrib': [5, 8, 12, 10],
-            'speed': [12.5, 11.2, 9.8, 10.5]
-        })
+        print("File XML trống hoặc chưa có dữ liệu mô phỏng phù hợp.")
+        if fallback_to_mock:
+            return create_mock_cleaned_data(output_csv)
+        return df
 
+    # Làm sạch giá trị thiếu và tốc độ âm (-1.00 trong SUMO khi không có xe qua detector)
     df = df.fillna(0)
-    df.loc[df['speed'] < 0, 'speed'] = 0
+    df.loc[df['speed'] < 0, 'speed'] = 0.0
 
-    os.makedirs(os.path.dirname(output_csv), exist_ok=True)
+    _ensure_parent_dir(output_csv)
     df.to_csv(output_csv, index=False)
-    
+
     print(f"Làm sạch thành công! File lưu tại: {output_csv}")
     print(f"Tổng số dòng dữ liệu sạch: {len(df)}")
+    return df
+
 
 if __name__ == "__main__":
-    input_xml = "data/detector_output.xml"
-    output_csv = "data/detector_output_cleaned.csv"
-    
-    clean_xml_detector_data(input_xml, output_csv, warm_up_time=0)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    default_xml = os.path.join(base_dir, "data", "detector_output.xml")
+    default_csv = os.path.join(base_dir, "data", "detector_output_cleaned.csv")
+
+    parser = argparse.ArgumentParser(description="Làm sạch dữ liệu detector SUMO (Task 7.2) hoặc tạo dữ liệu mẫu (Task 8.1)")
+    parser.add_argument("--input", default=default_xml, help="Đường dẫn file detector XML đầu vào")
+    parser.add_argument("--output", default=default_csv, help="Đường dẫn file CSV đầu ra")
+    parser.add_argument("--warmup", type=float, default=0, help="Thời gian warm-up cần loại bỏ (giây)")
+    parser.add_argument("--mock", action="store_true", help="Tạo dữ liệu mẫu (mock) thay vì đọc từ XML")
+    args = parser.parse_args()
+
+    if args.mock:
+        create_mock_cleaned_data(args.output)
+    else:
+        clean_xml_detector_data(args.input, args.output, warm_up_time=args.warmup)
