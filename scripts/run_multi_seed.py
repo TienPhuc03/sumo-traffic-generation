@@ -29,6 +29,9 @@ CFG_DIR = os.path.join(ROOT, 'configs')
 DATA_DIR = os.path.join(ROOT, 'data')
 RAW_DIR = os.path.join(DATA_DIR, 'raw')
 SCENARIOS = ['offpeak', 'baseline', 'peak', 'congestion', 'tls_optimized', 'tls_actuated']
+# Chu kỳ ghi summary/queue/emission cho data/raw (cfg gốc là 60 s). 30 s để gộp được
+# theo khoảng 30 s ở aggregate_intervals.py; không ảnh hưởng động học mô phỏng.
+SAMPLE_PERIOD = 30
 
 
 def find_sumo():
@@ -55,6 +58,9 @@ def run_one(sumo, scenario, seed, steps):
         '--queue-output', os.path.join(out, 'queue.xml'),
         '--edgedata-output', os.path.join(out, 'edgedata.xml'),
         '--emission-output', os.path.join(out, 'emission.xml'),
+        '--summary-output.period', str(SAMPLE_PERIOD),
+        '--queue-output.period', str(SAMPLE_PERIOD),
+        '--device.emissions.period', str(SAMPLE_PERIOD),
         '--no-warnings', 'true',
         '--log', os.path.join(out, 'sumo.log'),
         '--error-log', os.path.join(out, 'sumo_error.log'),
