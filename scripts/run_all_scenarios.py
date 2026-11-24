@@ -21,6 +21,8 @@ if sys.stdout.encoding != 'utf-8':
     except Exception:
         pass
 
+EMISSION_PERIOD_S = 60  # khớp <device.emissions.period value="60"/> trong configs/*.sumocfg
+
 SCENARIOS = {
     'offpeak': {
         'name': '1. Giờ thấp điểm (Off-peak)',
@@ -145,7 +147,8 @@ def parse_metrics(data_dir, scenario_info):
             co2_mg = 0.0
             for event, elem in ET.iterparse(emission_path):
                 if elem.tag == 'vehicle':
-                    co2_mg += float(elem.get('CO2', 0))
+                    # CO2 là tốc độ tức thời (mg/s); nhân chu kỳ mẫu device.emissions.period=60 s để ra mg
+                    co2_mg += float(elem.get('CO2', 0)) * EMISSION_PERIOD_S
                 elem.clear()
             metrics['total_co2_g'] = co2_mg / 1000.0
         except Exception:

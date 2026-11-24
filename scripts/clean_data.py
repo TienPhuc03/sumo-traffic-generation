@@ -4,11 +4,12 @@ import sys
 import xml.etree.ElementTree as ET
 import pandas as pd
 
-if sys.stdout.encoding != 'utf-8':
-    try:
-        sys.stdout.reconfigure(encoding='utf-8')
-    except Exception:
-        pass
+for _s in (sys.stdout, sys.stderr):
+    if _s.encoding != 'utf-8':
+        try:
+            _s.reconfigure(encoding='utf-8')
+        except Exception:
+            pass
 
 
 def _ensure_parent_dir(file_path):
@@ -36,18 +37,21 @@ def create_mock_cleaned_data(output_csv="data/detector_output_cleaned.csv"):
     return df
 
 
-def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0, fallback_to_mock=True):
+def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0, fallback_to_mock=False):
     """
     Đọc, lọc thời gian khởi động (warm-up) và làm sạch dữ liệu detector từ XML của SUMO (Task 7.2).
     Xuất ra file CSV chuẩn gồm 4 cột: time, id, nVehContrib, speed để tương thích với Task 8.1.
+    Thiếu file hoặc file rỗng -> dừng chương trình (không tự sinh dữ liệu giả),
+    trừ khi gọi rõ fallback_to_mock=True.
     """
     print(f"Đang đọc và phân tích file XML từ: {xml_file}")
 
     if not os.path.exists(xml_file):
-        print(f"Cảnh báo: Không tìm thấy file {xml_file}.")
         if fallback_to_mock:
+            print(f"Cảnh báo: Không tìm thấy file {xml_file}. Dùng dữ liệu mẫu theo yêu cầu.")
             return create_mock_cleaned_data(output_csv)
-        return pd.DataFrame()
+        sys.exit(f"LỖI: Không tìm thấy file detector {xml_file}. Hãy chạy mô phỏng trước "
+                 f"(hoặc dùng --mock nếu cố ý muốn dữ liệu mẫu).")
 
     tree = ET.parse(xml_file)
     root = tree.getroot()
@@ -82,10 +86,10 @@ def clean_xml_detector_data(xml_file, output_csv, warm_up_time=0, fallback_to_mo
     df = pd.DataFrame(data_list)
 
     if df.empty:
-        print("File XML trống hoặc chưa có dữ liệu mô phỏng phù hợp.")
         if fallback_to_mock:
+            print("File XML trống. Dùng dữ liệu mẫu theo yêu cầu.")
             return create_mock_cleaned_data(output_csv)
-        return df
+        sys.exit(f"LỖI: File {xml_file} không có bản ghi detector nào (sau warm-up={warm_up_time}s).")
 
     # Làm sạch giá trị thiếu và tốc độ âm (-1.00 trong SUMO khi không có xe qua detector)
     df = df.fillna(0)
